@@ -5,12 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>مؤسسة اللمسة العصرية للمقاولات - الدمام | بناء ترميم ديكور</title>
   <meta name="description" content="مؤسسة اللمسة العصرية للمقاولات بالدمام - بناء، ترميم، كهرباء، سباكة، دهانات، جبس، تبليط، مظلات، تكييف، كشف تسريبات في جميع أحياء الدمام" />
+  <meta name="author" content="مؤسسة اللمسة العصرية للمقاولات" />
+  <link rel="canonical" href="https://allamsahaleasrih.online/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+    /* ── TOPBAR ── */
+    .topbar{
+      background:var(--primary-d);border-bottom:1px solid rgba(245,124,0,.25);
+      font-size:13px;font-weight:600;position:relative;z-index:1001;
+    }
+    .topbar-in{
+      max-width:1300px;margin:0 auto;padding:8px 24px;
+      display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;
+    }
+    .tb-left,.tb-right{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+    .tb-left a,.tb-right a,.tb-right span{
+      color:rgba(255,255,255,.8);text-decoration:none;
+      display:flex;align-items:center;gap:6px;transition:color .2s;
+    }
+    .tb-left a:hover,.tb-right a:hover{color:var(--orange-l)}
+    .tb-left a i,.tb-right a i,.tb-right span i{color:var(--orange-l);font-size:12px}
+    @media(max-width:640px){.tb-right{display:none}}
 
     :root {
       --primary:   #1a237e;
@@ -501,6 +521,20 @@
 </head>
 <body>
 
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-in">
+    <div class="tb-left">
+      <a href="https://allamsahaleasrih.online" target="_blank"><i class="fas fa-globe"></i> allamsahaleasrih.online</a>
+      <a href="mailto:info@allamsahaleasrih.online"><i class="fas fa-envelope"></i> info@allamsahaleasrih.online</a>
+    </div>
+    <div class="tb-right">
+      <a href="tel:+966500000000"><i class="fas fa-phone-alt"></i> 0500 000 000</a>
+      <span><i class="fas fa-clock"></i> خدمة 24 ساعة / 7 أيام</span>
+    </div>
+  </div>
+</div>
+
 <!-- HEADER -->
 <header>
   <div class="hd">
@@ -978,6 +1012,17 @@
               <span>نلتزم ببنود العقد ونحرص على إتمام المشروع في الوقت المتفق عليه دون أي تأخير</span>
             </div>
           </div>
+          <div class="ab-f fi">
+            <div class="ab-f-ico"><i class="fas fa-globe"></i></div>
+            <div>
+              <strong>موقعنا الإلكتروني</strong>
+              <span>
+                <a href="https://allamsahaleasrih.online" target="_blank" style="color:var(--orange);font-weight:800">allamsahaleasrih.online</a>
+                &nbsp;|&nbsp;
+                <a href="mailto:info@allamsahaleasrih.online" style="color:var(--primary);font-weight:700">info@allamsahaleasrih.online</a>
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1181,12 +1226,24 @@
           <div class="ct-ico"><i class="fas fa-envelope"></i></div>
           <div class="ct-txt">
             <strong>البريد الإلكتروني</strong>
-            <span><a href="mailto:info@modrenlamsa.com">info@modrenlamsa.com</a></span>
+            <span><a href="mailto:info@allamsahaleasrih.online">info@allamsahaleasrih.online</a></span>
+          </div>
+        </div>
+        <div class="ct-item fi">
+          <div class="ct-ico"><i class="fas fa-globe"></i></div>
+          <div class="ct-txt">
+            <strong>الموقع الإلكتروني</strong>
+            <span><a href="https://allamsahaleasrih.online" target="_blank">allamsahaleasrih.online</a></span>
           </div>
         </div>
       </div>
       <div class="form-wrap fi">
         <div class="form-ttl"><i class="fas fa-hard-hat"></i> اطلب عرض سعر مجاناً</div>
+        <p style="font-size:13px;color:var(--gray);margin-bottom:18px;display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+          <i class="fas fa-envelope" style="color:var(--orange)"></i>
+          أو راسلنا مباشرة:
+          <a href="mailto:info@allamsahaleasrih.online" style="color:var(--primary);font-weight:800;text-decoration:none">info@allamsahaleasrih.online</a>
+        </p>
         <form onsubmit="submitForm(event)">
           <div class="fr">
             <div class="fg">
@@ -1263,6 +1320,11 @@
         </div>
       </a>
       <p>مؤسسة سعودية مرخصة متخصصة في جميع أعمال المقاولات والبناء والتشطيب والصيانة في الدمام منذ أكثر من 15 عاماً.</p>
+      <p style="margin-top:10px;font-size:13px">
+        <a href="https://allamsahaleasrih.online" target="_blank" style="color:var(--orange-l);text-decoration:none"><i class="fas fa-globe"></i> allamsahaleasrih.online</a>
+        <br>
+        <a href="mailto:info@allamsahaleasrih.online" style="color:rgba(255,255,255,.6);text-decoration:none;font-size:12px"><i class="fas fa-envelope"></i> info@allamsahaleasrih.online</a>
+      </p>
       <div class="ft-soc">
         <a href="#" class="ft-s"><i class="fab fa-whatsapp"></i></a>
         <a href="#" class="ft-s"><i class="fab fa-instagram"></i></a>
@@ -1300,13 +1362,19 @@
       <ul>
         <li><a href="tel:+966500000000"><i class="fas fa-phone"></i> 0500 000 000</a></li>
         <li><a href="https://wa.me/966500000000" target="_blank"><i class="fab fa-whatsapp"></i> واتساب</a></li>
-        <li><a href="mailto:info@modrenlamsa.com"><i class="fas fa-envelope"></i> راسلنا</a></li>
+        <li><a href="mailto:info@allamsahaleasrih.online"><i class="fas fa-envelope"></i> info@allamsahaleasrih.online</a></li>
+        <li><a href="https://allamsahaleasrih.online" target="_blank"><i class="fas fa-globe"></i> allamsahaleasrih.online</a></li>
         <li><a href="#areas"><i class="fas fa-map-marker-alt"></i> الدمام، المنطقة الشرقية</a></li>
       </ul>
     </div>
   </div>
   <div class="ft-b">
     <p>© 2025 مؤسسة اللمسة العصرية للمقاولات — جميع الحقوق محفوظة | مقاولات الدمام</p>
+  <p style="margin-top:6px;opacity:.6">
+    <a href="https://allamsahaleasrih.online" target="_blank" style="color:var(--orange-l);text-decoration:none">allamsahaleasrih.online</a>
+    &nbsp;·&nbsp;
+    <a href="mailto:info@allamsahaleasrih.online" style="color:inherit;text-decoration:none">info@allamsahaleasrih.online</a>
+  </p>
   </div>
 </footer>
 
