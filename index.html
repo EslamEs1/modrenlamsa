@@ -223,12 +223,24 @@
     }
     .srv-name{font-size:18px;font-weight:900;color:var(--dark);margin-bottom:9px}
     .srv-desc{font-size:13.5px;color:var(--gray);line-height:1.82}
-    .srv-link{
-      display:inline-flex;align-items:center;gap:6px;
-      color:var(--orange);font-size:14px;font-weight:800;
-      margin-top:13px;text-decoration:none;transition:gap .2s;
+    .srv-actions{display:flex;flex-direction:column;gap:8px;margin-top:14px;border-top:1px solid #f0f0f0;padding-top:14px}
+    .srv-call{
+      display:flex;align-items:center;justify-content:center;gap:8px;
+      background:linear-gradient(135deg,var(--primary),var(--primary-l));
+      color:#fff;text-decoration:none;font-size:14px;font-weight:800;
+      padding:10px 16px;border-radius:10px;
+      transition:all .22s;
     }
-    .srv-link:hover{gap:11px}
+    .srv-call:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(26,35,126,.3)}
+    .srv-call i{font-size:13px}
+    .srv-email{
+      display:flex;align-items:center;justify-content:center;gap:7px;
+      background:rgba(245,124,0,.08);border:1.5px solid rgba(245,124,0,.25);
+      color:var(--orange);text-decoration:none;font-size:12.5px;font-weight:700;
+      padding:8px 12px;border-radius:10px;
+      transition:all .22s;word-break:break-all;text-align:center;
+    }
+    .srv-email:hover{background:rgba(245,124,0,.15);border-color:var(--orange)}
 
     /* ── ABOUT ── */
     #about{background:#fff}
@@ -672,7 +684,10 @@
             <li><i class="fas fa-check-circle"></i> تسليم جاهز للتشطيب بالموعد</li>
           </ul>
           <div class="srv-guarantee"><i class="fas fa-shield-alt"></i> ضمان على الإنشاء</div>
-          <a href="https://wa.me/966500000000?text=أريد الاستفسار عن خدمة البناء والإنشاء" class="srv-link" target="_blank">اطلب عرض سعر <i class="fas fa-arrow-left"></i></a>
+          <div class="srv-actions">
+          <a href="tel:+966500000000" class="srv-call"><i class="fas fa-phone-alt"></i> اتصل بنا الآن</a>
+          <a href="mailto:info@allamsahaleasrih.online" class="srv-email"><i class="fas fa-envelope"></i> info@allamsahaleasrih.online</a>
+        </div>
         </div>
       </div>
 
@@ -691,7 +706,10 @@
             <li><i class="fas fa-check-circle"></i> إعادة تصميم وتوزيع المساحات</li>
           </ul>
           <div class="srv-guarantee"><i class="fas fa-shield-alt"></i> ضمان على الترميم</div>
-          <a href="https://wa.me/966500000000?text=أريد الاستفسار عن خدمة الترميم والتجديد" class="srv-link" target="_blank">اطلب عرض سعر <i class="fas fa-arrow-left"></i></a>
+          <div class="srv-actions">
+          <a href="tel:+966500000000" class="srv-call"><i class="fas fa-phone-alt"></i> اتصل بنا الآن</a>
+          <a href="mailto:info@allamsahaleasrih.online" class="srv-email"><i class="fas fa-envelope"></i> info@allamsahaleasrih.online</a>
+        </div>
         </div>
       </div>
 
@@ -710,7 +728,10 @@
             <li><i class="fas fa-check-circle"></i> ديكور داخلي حديث وكلاسيكي فاخر</li>
           </ul>
           <div class="srv-guarantee"><i class="fas fa-shield-alt"></i> ضمان اللون 3 سنوات</div>
-          <a href="https://wa.me/966500000000?text=أريد الاستفسار عن خدمة الدهانات والديكور" class="srv-link" target="_blank">اطلب عرض سعر <i class="fas fa-arrow-left"></i></a>
+          <div class="srv-actions">
+          <a href="tel:+966500000000" class="srv-call"><i class="fas fa-phone-alt"></i> اتصل بنا الآن</a>
+          <a href="mailto:info@allamsahaleasrih.online" class="srv-email"><i class="fas fa-envelope"></i> info@allamsahaleasrih.online</a>
+        </div>
         </div>
       </div>
 
@@ -729,7 +750,10 @@
             <li><i class="fas fa-check-circle"></i> صيانة وإصلاح جميع أعطال الكهرباء</li>
           </ul>
           <div class="srv-guarantee"><i class="fas fa-shield-alt"></i> فني معتمد مرخص</div>
-          <a href="https://wa.me/966500000000?text=أريد الاستفسار عن الأعمال الكهربائية" class="srv-link" target="_blank">اطلب عرض سعر <i class="fas fa-arrow-left"></i></a>
+          <div class="srv-actions">
+          <a href="tel:+966500000000" class="srv-call"><i class="fas fa-phone-alt"></i> اتصل بنا الآن</a>
+          <a href="mailto:info@allamsahaleasrih.online" class="srv-email"><i class="fas fa-envelope"></i> info@allamsahaleasrih.online</a>
+        </div>
         </div>
       </div>
 
@@ -748,7 +772,10 @@
             <li><i class="fas fa-check-circle"></i> صيانة المضخات وإصلاح التسريبات</li>
           </ul>
           <div class="srv-guarantee"><i class="fas fa-shield-alt"></i> ضمان سنة كاملة</div>
-          <a href="https://wa.me/966500000000?text=أريد الاستفسار عن أعمال السباكة والصحي" class="srv-link" target="_blank">اطلب عرض سعر <i class="fas fa-arrow-left"></i></a>
+          <div class="srv-actions">
+          <a href="tel:+966500000000" class="srv-call"><i class="fas fa-phone-alt"></i> اتصل بنا الآن</a>
+          <a href="mailto:info@allamsahaleasrih.online" class="srv-email"><i class="fas fa-envelope"></i> info@allamsahaleasrih.online</a>
+        </div>
         </div>
       </div>
 
@@ -767,7 +794,10 @@
             <li><i class="fas fa-check-circle"></i> جبس منحوت وزخرفة عربية كلاسيكية</li>
           </ul>
           <div class="srv-guarantee"><i class="fas fa-shield-alt"></i> ضمان على الشغل</div>
-          <a href="https://wa.me/966500000000?text=أريد الاستفسار عن أعمال الجبس والأسقف" class="srv-link" target="_blank">اطلب عرض سعر <i class="fas fa-arrow-left"></i></a>
+          <div class="srv-actions">
+          <a href="tel:+966500000000" class="srv-call"><i class="fas fa-phone-alt"></i> اتصل بنا الآن</a>
+          <a href="mailto:info@allamsahaleasrih.online" class="srv-email"><i class="fas fa-envelope"></i> info@allamsahaleasrih.online</a>
+        </div>
         </div>
       </div>
 
@@ -786,7 +816,10 @@
             <li><i class="fas fa-check-circle"></i> ترميم وتغيير الأرضيات القديمة</li>
           </ul>
           <div class="srv-guarantee"><i class="fas fa-shield-alt"></i> تشطيب فائق الجودة</div>
-          <a href="https://wa.me/966500000000?text=أريد الاستفسار عن التبليط والأرضيات" class="srv-link" target="_blank">اطلب عرض سعر <i class="fas fa-arrow-left"></i></a>
+          <div class="srv-actions">
+          <a href="tel:+966500000000" class="srv-call"><i class="fas fa-phone-alt"></i> اتصل بنا الآن</a>
+          <a href="mailto:info@allamsahaleasrih.online" class="srv-email"><i class="fas fa-envelope"></i> info@allamsahaleasrih.online</a>
+        </div>
         </div>
       </div>
 
@@ -805,7 +838,10 @@
             <li><i class="fas fa-check-circle"></i> صيانة وإصلاح المظلات القديمة</li>
           </ul>
           <div class="srv-guarantee"><i class="fas fa-shield-alt"></i> ضمان ضد الصدأ والكسر</div>
-          <a href="https://wa.me/966500000000?text=أريد الاستفسار عن المظلات والبرجولات" class="srv-link" target="_blank">اطلب عرض سعر <i class="fas fa-arrow-left"></i></a>
+          <div class="srv-actions">
+          <a href="tel:+966500000000" class="srv-call"><i class="fas fa-phone-alt"></i> اتصل بنا الآن</a>
+          <a href="mailto:info@allamsahaleasrih.online" class="srv-email"><i class="fas fa-envelope"></i> info@allamsahaleasrih.online</a>
+        </div>
         </div>
       </div>
 
@@ -824,7 +860,10 @@
             <li><i class="fas fa-check-circle"></i> توريد وتركيب جميع الماركات</li>
           </ul>
           <div class="srv-guarantee"><i class="fas fa-shield-alt"></i> ضمان سنة على الشغل</div>
-          <a href="https://wa.me/966500000000?text=أريد الاستفسار عن التكييف والتبريد" class="srv-link" target="_blank">اطلب عرض سعر <i class="fas fa-arrow-left"></i></a>
+          <div class="srv-actions">
+          <a href="tel:+966500000000" class="srv-call"><i class="fas fa-phone-alt"></i> اتصل بنا الآن</a>
+          <a href="mailto:info@allamsahaleasrih.online" class="srv-email"><i class="fas fa-envelope"></i> info@allamsahaleasrih.online</a>
+        </div>
         </div>
       </div>
 
@@ -843,7 +882,10 @@
             <li><i class="fas fa-check-circle"></i> غرف مواتير وأعمال الستيل الخاصة</li>
           </ul>
           <div class="srv-guarantee"><i class="fas fa-shield-alt"></i> دهان إيبوكسي ضد الصدأ</div>
-          <a href="https://wa.me/966500000000?text=أريد الاستفسار عن الأعمال الحديدية والألمنيوم" class="srv-link" target="_blank">اطلب عرض سعر <i class="fas fa-arrow-left"></i></a>
+          <div class="srv-actions">
+          <a href="tel:+966500000000" class="srv-call"><i class="fas fa-phone-alt"></i> اتصل بنا الآن</a>
+          <a href="mailto:info@allamsahaleasrih.online" class="srv-email"><i class="fas fa-envelope"></i> info@allamsahaleasrih.online</a>
+        </div>
         </div>
       </div>
 
@@ -862,7 +904,10 @@
             <li><i class="fas fa-check-circle"></i> ضمان ضد الرطوبة لسنوات</li>
           </ul>
           <div class="srv-guarantee"><i class="fas fa-shield-alt"></i> ضمان 5 سنوات ضد الرطوبة</div>
-          <a href="https://wa.me/966500000000?text=أريد الاستفسار عن العزل وكشف التسريبات" class="srv-link" target="_blank">اطلب عرض سعر <i class="fas fa-arrow-left"></i></a>
+          <div class="srv-actions">
+          <a href="tel:+966500000000" class="srv-call"><i class="fas fa-phone-alt"></i> اتصل بنا الآن</a>
+          <a href="mailto:info@allamsahaleasrih.online" class="srv-email"><i class="fas fa-envelope"></i> info@allamsahaleasrih.online</a>
+        </div>
         </div>
       </div>
 
@@ -881,7 +926,10 @@
             <li><i class="fas fa-check-circle"></i> فومجيشن وتعقيم شامل للمنشآت</li>
           </ul>
           <div class="srv-guarantee"><i class="fas fa-shield-alt"></i> ضمان عدم عودة الحشرات</div>
-          <a href="https://wa.me/966500000000?text=أريد الاستفسار عن النظافة ومكافحة الحشرات" class="srv-link" target="_blank">اطلب عرض سعر <i class="fas fa-arrow-left"></i></a>
+          <div class="srv-actions">
+          <a href="tel:+966500000000" class="srv-call"><i class="fas fa-phone-alt"></i> اتصل بنا الآن</a>
+          <a href="mailto:info@allamsahaleasrih.online" class="srv-email"><i class="fas fa-envelope"></i> info@allamsahaleasrih.online</a>
+        </div>
         </div>
       </div>
 
