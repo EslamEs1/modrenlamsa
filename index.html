@@ -3,827 +3,851 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>مؤسسة اللمسة العصرية - خدمات التبريد والتكييف بالدمام</title>
-  <meta name="description" content="مؤسسة اللمسة العصرية - خدمات التبريد والتكييف والنظافة ونقل الأثاث والمظلات وكشف التسريبات في الدمام" />
+  <title>مؤسسة اللمسة العصرية للمقاولات - الدمام | بناء ترميم ديكور</title>
+  <meta name="description" content="مؤسسة اللمسة العصرية للمقاولات بالدمام - بناء، ترميم، كهرباء، سباكة، دهانات، جبس، تبليط، مظلات، تكييف، كشف تسريبات في جميع أحياء الدمام" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
     :root {
-      --primary: #0d47a1;
-      --primary-dark: #082a6b;
-      --primary-light: #1565c0;
-      --accent: #00b0ff;
-      --accent2: #00e5ff;
-      --gold: #f9a825;
-      --white: #ffffff;
-      --light: #f0f4ff;
-      --gray: #6b7280;
-      --dark: #0d1b2a;
-      --card-bg: #ffffff;
-      --shadow: 0 8px 32px rgba(13,71,161,0.13);
-      --radius: 18px;
+      --primary:   #1a237e;
+      --primary-d: #0d1654;
+      --primary-l: #283593;
+      --orange:    #f57c00;
+      --orange-l:  #ff9800;
+      --gold:      #ffc107;
+      --white:     #ffffff;
+      --light:     #f4f6fc;
+      --gray:      #64748b;
+      --dark:      #0d1b2a;
+      --shadow:    0 8px 36px rgba(26,35,126,.12);
+      --r:         18px;
     }
 
-    html { scroll-behavior: smooth; }
+    html{scroll-behavior:smooth}
+    body{font-family:'Tajawal',sans-serif;background:var(--light);color:var(--dark);direction:rtl;overflow-x:hidden}
 
-    body {
-      font-family: 'Tajawal', sans-serif;
-      background: var(--light);
-      color: var(--dark);
-      direction: rtl;
-      overflow-x: hidden;
+    /* ── HEADER ── */
+    header{
+      position:fixed;top:0;right:0;left:0;z-index:1000;
+      background:rgba(13,22,84,.97);backdrop-filter:blur(14px);
+      border-bottom:2px solid rgba(245,124,0,.2);
+      transition:all .3s;
     }
+    .hd{
+      max-width:1300px;margin:0 auto;padding:0 24px;
+      height:72px;display:flex;align-items:center;justify-content:space-between;
+    }
+    .logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+    .logo-ico{
+      width:50px;height:50px;border-radius:13px;flex-shrink:0;
+      background:linear-gradient(135deg,var(--orange),#e65100);
+      display:flex;align-items:center;justify-content:center;
+      font-size:22px;color:#fff;
+      box-shadow:0 4px 18px rgba(245,124,0,.45);
+    }
+    .logo-txt .n{font-size:16px;font-weight:900;color:#fff;line-height:1.2}
+    .logo-txt .s{font-size:11px;color:var(--orange-l);font-weight:600}
+    nav{display:flex;gap:4px;align-items:center}
+    nav a{
+      color:rgba(255,255,255,.82);text-decoration:none;
+      font-size:14.5px;font-weight:600;padding:8px 14px;border-radius:8px;
+      transition:all .22s;
+    }
+    nav a:hover,nav a.active{color:var(--orange-l);background:rgba(255,152,0,.1)}
+    .hd-cta{
+      background:linear-gradient(135deg,var(--orange),#e65100)!important;
+      color:#fff!important;padding:9px 20px!important;border-radius:50px!important;
+      font-weight:800!important;box-shadow:0 4px 18px rgba(245,124,0,.4);
+    }
+    .hd-cta:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(245,124,0,.55)!important}
+    .hbg{display:none;background:none;border:none;cursor:pointer;color:#fff;font-size:24px}
+    .mnav{
+      display:none;flex-direction:column;
+      background:var(--primary-d);padding:16px 24px;
+      border-top:1px solid rgba(255,255,255,.07);
+    }
+    .mnav a{color:rgba(255,255,255,.82);text-decoration:none;font-size:16px;font-weight:600;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+    .mnav.open{display:flex}
 
-    /* ===== HEADER ===== */
-    header {
-      position: fixed;
-      top: 0; right: 0; left: 0;
-      z-index: 1000;
-      background: rgba(13, 27, 42, 0.97);
-      backdrop-filter: blur(12px);
-      border-bottom: 2px solid rgba(0,176,255,0.18);
-      transition: all .3s;
+    /* ── HERO ── */
+    .hero{
+      min-height:100vh;position:relative;
+      background:linear-gradient(140deg,#0d1654 0%,#1a237e 45%,#4a148c 100%);
+      display:flex;align-items:center;overflow:hidden;
     }
-    .header-inner {
-      max-width: 1300px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 24px;
-      height: 72px;
+    .hero::before{
+      content:'';position:absolute;inset:0;
+      background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     }
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-    }
-    .logo-icon {
-      width: 48px; height: 48px;
-      background: linear-gradient(135deg, var(--accent), var(--primary));
-      border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 22px; color: white;
-      box-shadow: 0 4px 16px rgba(0,176,255,0.4);
-    }
-    .logo-text { color: white; }
-    .logo-text .name { font-size: 17px; font-weight: 800; line-height: 1.2; }
-    .logo-text .sub { font-size: 11px; color: var(--accent); font-weight: 500; }
+    .blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.2;animation:flt 9s ease-in-out infinite}
+    .b1{width:550px;height:550px;background:var(--orange);top:-150px;left:-100px}
+    .b2{width:420px;height:420px;background:#ce93d8;bottom:-80px;right:5%;animation-delay:-4.5s}
+    .b3{width:300px;height:300px;background:var(--gold);top:40%;right:30%;animation-delay:-2s}
+    @keyframes flt{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-28px) scale(1.06)}}
 
-    nav { display: flex; gap: 8px; align-items: center; }
-    nav a {
-      color: rgba(255,255,255,0.85);
-      text-decoration: none;
-      font-size: 15px;
-      font-weight: 500;
-      padding: 8px 16px;
-      border-radius: 8px;
-      transition: all .25s;
+    .hero-in{
+      max-width:1300px;margin:0 auto;padding:120px 24px 80px;
+      display:grid;grid-template-columns:1fr 1fr;gap:64px;
+      align-items:center;position:relative;z-index:2;
     }
-    nav a:hover, nav a.active {
-      color: var(--accent);
-      background: rgba(0,176,255,0.1);
+    .hero-cnt{color:#fff}
+    .badge{
+      display:inline-flex;align-items:center;gap:8px;
+      background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);
+      color:var(--gold);padding:8px 18px;border-radius:50px;
+      font-size:14px;font-weight:700;margin-bottom:22px;
+      backdrop-filter:blur(8px);
     }
-    .header-cta {
-      background: linear-gradient(135deg, var(--accent), var(--primary));
-      color: white !important;
-      padding: 9px 20px !important;
-      border-radius: 50px !important;
-      font-weight: 700 !important;
-      box-shadow: 0 4px 16px rgba(0,176,255,0.35);
+    .hero-h{font-size:clamp(1.9rem,4.5vw,3.2rem);font-weight:900;line-height:1.22;margin-bottom:16px}
+    .hero-h .hl{
+      background:linear-gradient(90deg,var(--orange-l),var(--gold));
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
     }
-    .header-cta:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 6px 24px rgba(0,176,255,0.5) !important;
-      background: rgba(0,176,255,0.1) !important;
-      color: var(--accent) !important;
+    .hero-p{font-size:17px;color:rgba(255,255,255,.82);line-height:1.85;margin-bottom:30px}
+    .tags{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:34px}
+    .tag{
+      background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.14);
+      color:#fff;padding:7px 14px;border-radius:50px;
+      font-size:13px;font-weight:600;
+      display:flex;align-items:center;gap:6px;backdrop-filter:blur(6px);
     }
-    .hamburger {
-      display: none;
-      background: none; border: none; cursor: pointer;
-      color: white; font-size: 24px;
+    .tag i{color:var(--orange-l)}
+    .acts{display:flex;gap:14px;flex-wrap:wrap}
+    .btn-wa{
+      background:linear-gradient(135deg,#25d366,#128c7e);
+      color:#fff;border:none;cursor:pointer;
+      padding:14px 28px;border-radius:50px;
+      font-size:16px;font-weight:800;font-family:'Tajawal',sans-serif;
+      display:inline-flex;align-items:center;gap:10px;text-decoration:none;
+      box-shadow:0 6px 24px rgba(37,211,102,.4);transition:all .25s;
     }
-    .mobile-nav {
-      display: none;
-      flex-direction: column;
-      background: var(--dark);
-      padding: 16px 24px;
-      border-top: 1px solid rgba(255,255,255,0.08);
+    .btn-wa:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(37,211,102,.55)}
+    .btn-call{
+      background:rgba(255,255,255,.1);color:#fff;
+      border:2px solid rgba(255,255,255,.28);cursor:pointer;
+      padding:12px 28px;border-radius:50px;
+      font-size:16px;font-weight:700;font-family:'Tajawal',sans-serif;
+      display:inline-flex;align-items:center;gap:10px;text-decoration:none;
+      backdrop-filter:blur(8px);transition:all .25s;
     }
-    .mobile-nav a {
-      color: rgba(255,255,255,0.85);
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: 500;
-      padding: 12px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
-    .mobile-nav.open { display: flex; }
+    .btn-call:hover{background:rgba(255,255,255,.2);border-color:var(--orange-l)}
 
-    /* ===== HERO ===== */
-    .hero {
-      min-height: 100vh;
-      background: linear-gradient(135deg, #0d1b2a 0%, #0d47a1 50%, #00838f 100%);
-      position: relative;
-      display: flex;
-      align-items: center;
-      overflow: hidden;
+    .hero-img-wrap{position:relative}
+    .hero-img{
+      width:100%;border-radius:24px;display:block;
+      aspect-ratio:4/3;object-fit:cover;
+      box-shadow:0 32px 80px rgba(0,0,0,.45);
     }
-    .hero::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    .hero-badge{
+      position:absolute;bottom:-22px;right:-22px;
+      background:#fff;border-radius:18px;padding:16px 20px;
+      box-shadow:0 8px 32px rgba(0,0,0,.18);
+      display:flex;align-items:center;gap:12px;
     }
-    .hero-blob {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(80px);
-      opacity: 0.25;
-      animation: float 8s ease-in-out infinite;
+    .hero-badge .num{font-size:26px;font-weight:900;color:var(--primary)}
+    .hero-badge .txt{font-size:11px;font-weight:700;color:var(--gray);line-height:1.45}
+    .hero-badge2{
+      position:absolute;top:22px;left:-22px;
+      background:linear-gradient(135deg,var(--orange),#e65100);
+      color:#fff;border-radius:16px;padding:14px 18px;text-align:center;
+      box-shadow:0 8px 28px rgba(245,124,0,.4);
     }
-    .hero-blob-1 { width: 500px; height: 500px; background: var(--accent); top: -100px; left: -100px; }
-    .hero-blob-2 { width: 400px; height: 400px; background: var(--gold); bottom: -100px; right: 10%; animation-delay: -4s; }
-    @keyframes float {
-      0%, 100% { transform: translateY(0) scale(1); }
-      50% { transform: translateY(-30px) scale(1.05); }
-    }
+    .hero-badge2 .n2{font-size:22px;font-weight:900;line-height:1}
+    .hero-badge2 .t2{font-size:11px;font-weight:600;opacity:.88;margin-top:3px}
 
-    .hero-inner {
-      max-width: 1300px; margin: 0 auto; padding: 120px 24px 80px;
-      display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
-      align-items: center; position: relative; z-index: 2;
+    /* ── STATS ── */
+    .stats{background:#fff;box-shadow:var(--shadow);position:relative;z-index:10}
+    .stats-in{
+      max-width:1300px;margin:0 auto;padding:0 24px;
+      display:grid;grid-template-columns:repeat(4,1fr);
     }
-    .hero-content { color: white; }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.2);
-      color: var(--accent2);
-      padding: 8px 18px; border-radius: 50px;
-      font-size: 14px; font-weight: 600;
-      margin-bottom: 24px;
-      backdrop-filter: blur(8px);
-    }
-    .hero-badge i { font-size: 16px; }
-    .hero-title {
-      font-size: clamp(2rem, 5vw, 3.4rem);
-      font-weight: 900;
-      line-height: 1.2;
-      margin-bottom: 16px;
-    }
-    .hero-title .highlight {
-      background: linear-gradient(90deg, var(--accent), var(--accent2));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .hero-sub {
-      font-size: 18px; color: rgba(255,255,255,0.8);
-      line-height: 1.8; margin-bottom: 32px;
-    }
-    .hero-services {
-      display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 36px;
-    }
-    .hero-service-tag {
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.15);
-      color: white;
-      padding: 7px 16px; border-radius: 50px;
-      font-size: 14px; font-weight: 500;
-      display: flex; align-items: center; gap: 6px;
-      backdrop-filter: blur(6px);
-    }
-    .hero-service-tag i { color: var(--accent); }
-    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
-    .btn-primary {
-      background: linear-gradient(135deg, #25d366, #128c7e);
-      color: white; border: none; cursor: pointer;
-      padding: 14px 28px; border-radius: 50px;
-      font-size: 16px; font-weight: 700;
-      font-family: 'Tajawal', sans-serif;
-      display: inline-flex; align-items: center; gap: 10px;
-      text-decoration: none;
-      box-shadow: 0 6px 24px rgba(37,211,102,0.4);
-      transition: all .25s;
-    }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(37,211,102,0.5); }
-    .btn-secondary {
-      background: rgba(255,255,255,0.1);
-      color: white; border: 2px solid rgba(255,255,255,0.3);
-      cursor: pointer; padding: 12px 28px; border-radius: 50px;
-      font-size: 16px; font-weight: 600;
-      font-family: 'Tajawal', sans-serif;
-      display: inline-flex; align-items: center; gap: 10px;
-      text-decoration: none;
-      backdrop-filter: blur(8px);
-      transition: all .25s;
-    }
-    .btn-secondary:hover { background: rgba(255,255,255,0.2); border-color: var(--accent); }
+    .si{text-align:center;padding:30px 20px;border-left:1px solid rgba(0,0,0,.06)}
+    .si:last-child{border-left:none}
+    .si .num{font-size:2.3rem;font-weight:900;color:var(--primary);line-height:1}
+    .si .lbl{font-size:13.5px;color:var(--gray);font-weight:600;margin-top:6px}
+    .si i{font-size:28px;color:var(--orange);margin-bottom:8px;display:block}
 
-    .hero-image {
-      position: relative;
+    /* ── COMMON ── */
+    section{padding:92px 0}
+    .sec{max-width:1300px;margin:0 auto;padding:0 24px}
+    .sh{text-align:center;margin-bottom:60px}
+    .stag{
+      display:inline-flex;align-items:center;gap:7px;
+      background:rgba(245,124,0,.1);color:var(--orange);
+      padding:7px 18px;border-radius:50px;font-size:14px;font-weight:800;margin-bottom:14px;
     }
-    .hero-img-main {
-      width: 100%; border-radius: 24px;
-      box-shadow: 0 30px 80px rgba(0,0,0,0.4);
-      display: block;
-      aspect-ratio: 4/3; object-fit: cover;
-    }
-    .hero-img-badge {
-      position: absolute; bottom: -20px; right: -20px;
-      background: white; border-radius: 20px;
-      padding: 18px 22px;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
-      display: flex; align-items: center; gap: 12px;
-    }
-    .hero-img-badge .num { font-size: 28px; font-weight: 900; color: var(--primary); }
-    .hero-img-badge .txt { font-size: 12px; font-weight: 600; color: var(--gray); line-height: 1.4; }
+    .s-ttl{font-size:clamp(1.7rem,3.8vw,2.5rem);font-weight:900;color:var(--dark);line-height:1.25;margin-bottom:12px}
+    .s-dsc{font-size:16.5px;color:var(--gray);max-width:650px;margin:0 auto;line-height:1.85}
 
-    /* ===== STATS BAR ===== */
-    .stats-bar {
-      background: white;
-      box-shadow: var(--shadow);
-      position: relative; z-index: 10;
+    /* ── SERVICES ── */
+    #services{background:var(--light)}
+    .srv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+    .srv{
+      background:#fff;border-radius:var(--r);overflow:hidden;
+      box-shadow:var(--shadow);transition:all .3s;
+      border:2px solid transparent;cursor:pointer;
     }
-    .stats-inner {
-      max-width: 1300px; margin: 0 auto; padding: 0 24px;
-      display: grid; grid-template-columns: repeat(4,1fr);
+    .srv:hover{transform:translateY(-8px);box-shadow:0 22px 60px rgba(26,35,126,.18);border-color:var(--orange)}
+    .srv img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
+    .srv-body{padding:22px}
+    .srv-ico{
+      width:50px;height:50px;border-radius:13px;
+      background:linear-gradient(135deg,var(--primary),var(--orange));
+      display:flex;align-items:center;justify-content:center;
+      font-size:20px;color:#fff;margin-bottom:13px;
+      box-shadow:0 5px 16px rgba(26,35,126,.25);
     }
-    .stat-item {
-      text-align: center; padding: 28px 20px;
-      border-left: 1px solid rgba(0,0,0,0.06);
+    .srv-name{font-size:18px;font-weight:900;color:var(--dark);margin-bottom:9px}
+    .srv-desc{font-size:13.5px;color:var(--gray);line-height:1.82}
+    .srv-link{
+      display:inline-flex;align-items:center;gap:6px;
+      color:var(--orange);font-size:14px;font-weight:800;
+      margin-top:13px;text-decoration:none;transition:gap .2s;
     }
-    .stat-item:last-child { border-left: none; }
-    .stat-num { font-size: 2.2rem; font-weight: 900; color: var(--primary); line-height: 1; }
-    .stat-label { font-size: 14px; color: var(--gray); font-weight: 500; margin-top: 6px; }
+    .srv-link:hover{gap:11px}
 
-    /* ===== SECTION COMMON ===== */
-    section { padding: 90px 0; }
-    .section-inner { max-width: 1300px; margin: 0 auto; padding: 0 24px; }
-    .section-header { text-align: center; margin-bottom: 60px; }
-    .section-tag {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(13,71,161,0.08);
-      color: var(--primary); padding: 7px 18px;
-      border-radius: 50px; font-size: 14px; font-weight: 700;
-      margin-bottom: 16px;
+    /* ── ABOUT ── */
+    #about{background:#fff}
+    .ab-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+    .ab-imgs{position:relative}
+    .ab-main{width:100%;border-radius:24px;display:block;aspect-ratio:4/3;object-fit:cover;box-shadow:0 20px 60px rgba(0,0,0,.14)}
+    .ab-sm{
+      position:absolute;bottom:-24px;left:-24px;
+      width:40%;border-radius:16px;display:block;aspect-ratio:1;object-fit:cover;
+      box-shadow:0 12px 36px rgba(0,0,0,.18);border:5px solid #fff;
     }
-    .section-title {
-      font-size: clamp(1.8rem, 4vw, 2.6rem);
-      font-weight: 900; color: var(--dark);
-      line-height: 1.25; margin-bottom: 14px;
+    .ab-yrs{
+      position:absolute;top:24px;right:-24px;
+      background:linear-gradient(135deg,var(--primary),var(--orange));
+      color:#fff;border-radius:18px;padding:18px 22px;text-align:center;
+      box-shadow:0 8px 28px rgba(26,35,126,.35);
     }
-    .section-desc { font-size: 17px; color: var(--gray); max-width: 640px; margin: 0 auto; line-height: 1.8; }
+    .ab-yrs .n{font-size:2.4rem;font-weight:900;line-height:1}
+    .ab-yrs .t{font-size:11.5px;font-weight:700;opacity:.88}
+    .ab-cnt .sh{text-align:right;margin-bottom:24px}
+    .ab-cnt .sh .s-dsc{margin:0}
+    .ab-feats{display:flex;flex-direction:column;gap:15px;margin-top:22px}
+    .ab-f{display:flex;align-items:flex-start;gap:13px;padding:15px;background:var(--light);border-radius:13px}
+    .ab-f-ico{
+      width:44px;height:44px;flex-shrink:0;border-radius:12px;
+      background:linear-gradient(135deg,var(--primary),var(--orange));
+      display:flex;align-items:center;justify-content:center;font-size:17px;color:#fff;
+    }
+    .ab-f strong{display:block;font-size:15px;font-weight:800;color:var(--dark)}
+    .ab-f span{font-size:13px;color:var(--gray);line-height:1.65}
 
-    /* ===== SERVICES ===== */
-    #services { background: var(--light); }
-    .services-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+    /* ── NEIGHBORHOODS ── */
+    #areas{
+      background:linear-gradient(145deg,#0d1654,#1a237e,#4a148c);
+      position:relative;overflow:hidden;
     }
-    .service-card {
-      background: white; border-radius: var(--radius);
-      overflow: hidden; box-shadow: var(--shadow);
-      transition: all .3s; cursor: pointer;
-      border: 2px solid transparent;
+    #areas::before{
+      content:'';position:absolute;inset:0;
+      background:radial-gradient(ellipse at 50% 40%,rgba(245,124,0,.13) 0%,transparent 65%);
     }
-    .service-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 60px rgba(13,71,161,0.18);
-      border-color: var(--accent);
+    #areas .s-ttl{color:#fff}
+    #areas .s-dsc{color:rgba(255,255,255,.72)}
+    #areas .stag{background:rgba(255,255,255,.1);color:var(--gold)}
+    .ar-grid{
+      display:grid;grid-template-columns:repeat(5,1fr);gap:13px;
+      position:relative;z-index:2;
     }
-    .service-img {
-      width: 100%; aspect-ratio: 16/10; object-fit: cover;
-      display: block;
+    .ar{
+      background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.11);
+      border-radius:14px;padding:17px 14px;text-align:center;
+      backdrop-filter:blur(8px);transition:all .25s;cursor:pointer;
     }
-    .service-body { padding: 24px; }
-    .service-icon {
-      width: 52px; height: 52px;
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      border-radius: 14px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 22px; color: white;
-      margin-bottom: 14px;
-      box-shadow: 0 6px 18px rgba(13,71,161,0.25);
-    }
-    .service-name { font-size: 19px; font-weight: 800; color: var(--dark); margin-bottom: 10px; }
-    .service-desc { font-size: 14px; color: var(--gray); line-height: 1.8; }
-    .service-link {
-      display: inline-flex; align-items: center; gap: 6px;
-      color: var(--primary); font-size: 14px; font-weight: 700;
-      margin-top: 14px; text-decoration: none;
-      transition: gap .2s;
-    }
-    .service-link:hover { gap: 10px; }
+    .ar:hover{background:rgba(245,124,0,.2);border-color:var(--orange);transform:translateY(-4px)}
+    .ar i{font-size:20px;color:var(--orange-l);margin-bottom:9px;display:block}
+    .ar span{font-size:14.5px;font-weight:800;color:#fff;display:block}
+    .ar small{font-size:11px;color:rgba(255,255,255,.5);margin-top:4px;display:block}
 
-    /* ===== ABOUT ===== */
-    #about { background: white; }
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; }
-    .about-images {
-      position: relative;
+    /* ── WHY ── */
+    #why{background:var(--light)}
+    .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+    .why{
+      background:#fff;border-radius:var(--r);padding:30px 22px;
+      text-align:center;box-shadow:var(--shadow);
+      transition:all .3s;border-top:4px solid transparent;
     }
-    .about-img-main {
-      width: 100%; border-radius: 24px; display: block;
-      aspect-ratio: 4/3; object-fit: cover;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    .why:hover{transform:translateY(-6px);border-top-color:var(--orange)}
+    .why-ico{
+      width:66px;height:66px;margin:0 auto 18px;border-radius:18px;
+      background:linear-gradient(135deg,rgba(26,35,126,.08),rgba(245,124,0,.12));
+      display:flex;align-items:center;justify-content:center;font-size:27px;color:var(--primary);
     }
-    .about-img-small {
-      position: absolute; bottom: -24px; left: -24px;
-      width: 42%; border-radius: 18px; display: block;
-      aspect-ratio: 1; object-fit: cover;
-      box-shadow: 0 12px 36px rgba(0,0,0,0.18);
-      border: 5px solid white;
-    }
-    .about-exp {
-      position: absolute; top: 24px; right: -24px;
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      color: white; border-radius: 18px;
-      padding: 18px 24px; text-align: center;
-      box-shadow: 0 8px 28px rgba(13,71,161,0.35);
-    }
-    .about-exp .num { font-size: 2.5rem; font-weight: 900; line-height: 1; }
-    .about-exp .txt { font-size: 12px; font-weight: 600; opacity: .85; }
-    .about-content .section-header { text-align: right; margin-bottom: 28px; }
-    .about-content .section-header .section-desc { margin: 0; }
-    .about-features { display: flex; flex-direction: column; gap: 16px; margin-top: 24px; }
-    .about-feature {
-      display: flex; align-items: flex-start; gap: 14px;
-      padding: 16px; background: var(--light); border-radius: 14px;
-    }
-    .about-feature-icon {
-      width: 44px; height: 44px; flex-shrink: 0;
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 18px; color: white;
-    }
-    .about-feature-text strong { display: block; font-size: 15px; font-weight: 700; color: var(--dark); }
-    .about-feature-text span { font-size: 13px; color: var(--gray); line-height: 1.6; }
+    .why-t{font-size:17px;font-weight:900;color:var(--dark);margin-bottom:9px}
+    .why-d{font-size:13.5px;color:var(--gray);line-height:1.82}
 
-    /* ===== NEIGHBORHOODS ===== */
-    #neighborhoods { background: linear-gradient(135deg, #0d1b2a, #0d47a1); position: relative; overflow: hidden; }
-    #neighborhoods::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: radial-gradient(ellipse at 50% 50%, rgba(0,176,255,0.15) 0%, transparent 70%);
+    /* ── PROCESS ── */
+    #process{background:#fff}
+    .proc{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+    .proc::before{
+      content:'';position:absolute;
+      top:50px;right:12.5%;left:12.5%;height:3px;
+      background:linear-gradient(90deg,var(--primary),var(--orange));z-index:0;
     }
-    #neighborhoods .section-title { color: white; }
-    #neighborhoods .section-desc { color: rgba(255,255,255,0.75); }
-    #neighborhoods .section-tag { background: rgba(255,255,255,0.1); color: var(--accent2); }
+    .ps{text-align:center;position:relative;z-index:1;padding:0 14px}
+    .ps-n{
+      width:52px;height:52px;margin:0 auto 18px;border-radius:50%;
+      background:linear-gradient(135deg,var(--primary),var(--orange));
+      display:flex;align-items:center;justify-content:center;
+      font-size:21px;font-weight:900;color:#fff;
+      box-shadow:0 6px 20px rgba(26,35,126,.35);border:4px solid #fff;
+    }
+    .ps-t{font-size:16px;font-weight:900;color:var(--dark);margin-bottom:7px}
+    .ps-d{font-size:13px;color:var(--gray);line-height:1.75}
 
-    .neighborhoods-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 14px;
-      position: relative; z-index: 2;
+    /* ── PROJECTS ── */
+    #projects{background:var(--light)}
+    .proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .proj{border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);position:relative;cursor:pointer}
+    .proj img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;transition:transform .4s}
+    .proj:hover img{transform:scale(1.06)}
+    .proj-ov{
+      position:absolute;inset:0;
+      background:linear-gradient(0deg,rgba(13,22,84,.85) 0%,transparent 55%);
+      display:flex;align-items:flex-end;padding:20px;
+      opacity:0;transition:opacity .3s;
     }
-    .neighborhood-card {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 14px; padding: 18px 16px;
-      text-align: center;
-      backdrop-filter: blur(8px);
-      transition: all .25s; cursor: pointer;
+    .proj:hover .proj-ov{opacity:1}
+    .proj-lbl{
+      background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);
+      color:#fff;padding:5px 13px;border-radius:50px;
+      font-size:13px;font-weight:700;
+      position:absolute;top:14px;right:14px;backdrop-filter:blur(6px);
     }
-    .neighborhood-card:hover {
-      background: rgba(0,176,255,0.2);
-      border-color: var(--accent);
-      transform: translateY(-4px);
-    }
-    .neighborhood-card i { font-size: 22px; color: var(--accent); margin-bottom: 10px; display: block; }
-    .neighborhood-card span { font-size: 15px; font-weight: 700; color: white; display: block; }
-    .neighborhood-card small { font-size: 12px; color: rgba(255,255,255,0.55); margin-top: 4px; display: block; }
+    .proj-ov-txt{color:#fff}
+    .proj-ov-txt strong{display:block;font-size:16px;font-weight:900;margin-bottom:4px}
+    .proj-ov-txt span{font-size:13px;opacity:.8}
 
-    /* ===== WHY US ===== */
-    #why { background: var(--light); }
-    .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-    .why-card {
-      background: white; border-radius: var(--radius);
-      padding: 32px 24px; text-align: center;
-      box-shadow: var(--shadow);
-      transition: all .3s;
-      border-top: 4px solid transparent;
+    /* ── TESTIMONIALS ── */
+    #testimonials{background:#fff}
+    .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .test{
+      background:var(--light);border-radius:var(--r);padding:26px;
+      border-right:5px solid var(--orange);transition:all .3s;
     }
-    .why-card:hover { transform: translateY(-6px); border-top-color: var(--accent); }
-    .why-icon {
-      width: 68px; height: 68px; margin: 0 auto 20px;
-      background: linear-gradient(135deg, rgba(13,71,161,0.08), rgba(0,176,255,0.12));
-      border-radius: 20px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 28px; color: var(--primary);
+    .test:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+    .test-stars{color:var(--gold);font-size:15px;margin-bottom:13px}
+    .test-txt{font-size:14.5px;color:var(--gray);line-height:1.9;margin-bottom:18px;font-style:italic}
+    .test-auth{display:flex;align-items:center;gap:11px}
+    .test-av{
+      width:44px;height:44px;border-radius:50%;flex-shrink:0;
+      background:linear-gradient(135deg,var(--primary),var(--orange));
+      display:flex;align-items:center;justify-content:center;
+      font-size:17px;color:#fff;font-weight:800;
     }
-    .why-title { font-size: 17px; font-weight: 800; color: var(--dark); margin-bottom: 10px; }
-    .why-desc { font-size: 14px; color: var(--gray); line-height: 1.8; }
+    .test-name{font-size:15px;font-weight:900;color:var(--dark)}
+    .test-loc{font-size:12px;color:var(--gray);margin-top:2px}
 
-    /* ===== PROCESS ===== */
-    #process { background: white; }
-    .process-steps {
-      display: grid; grid-template-columns: repeat(4,1fr); gap: 0;
-      position: relative;
+    /* ── CONTACT ── */
+    #contact{background:var(--light)}
+    .ct-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+    .ct-item{
+      display:flex;align-items:flex-start;gap:15px;padding:19px;
+      background:#fff;border-radius:var(--r);margin-bottom:13px;
+      box-shadow:var(--shadow);transition:all .25s;
     }
-    .process-steps::before {
-      content: '';
-      position: absolute;
-      top: 52px; right: 12.5%; left: 12.5%;
-      height: 3px;
-      background: linear-gradient(90deg, var(--primary), var(--accent));
-      z-index: 0;
+    .ct-item:hover{transform:translateX(-4px)}
+    .ct-ico{
+      width:50px;height:50px;flex-shrink:0;border-radius:13px;
+      background:linear-gradient(135deg,var(--primary),var(--orange));
+      display:flex;align-items:center;justify-content:center;font-size:19px;color:#fff;
     }
-    .process-step { text-align: center; position: relative; z-index: 1; padding: 0 16px; }
-    .process-num {
-      width: 56px; height: 56px; margin: 0 auto 20px;
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 22px; font-weight: 900; color: white;
-      box-shadow: 0 6px 20px rgba(13,71,161,0.35);
-      border: 4px solid white;
+    .ct-txt strong{display:block;font-size:15px;font-weight:800;color:var(--dark)}
+    .ct-txt span{font-size:14px;color:var(--gray);line-height:1.72}
+    .ct-txt a{color:var(--orange);text-decoration:none;font-weight:700}
+    .form-wrap{background:#fff;border-radius:var(--r);padding:34px;box-shadow:var(--shadow)}
+    .form-ttl{font-size:20px;font-weight:900;color:var(--dark);margin-bottom:22px}
+    .fg{margin-bottom:17px}
+    .fg label{display:block;font-size:13.5px;font-weight:800;color:var(--dark);margin-bottom:7px}
+    .fg input,.fg select,.fg textarea{
+      width:100%;padding:12px 15px;
+      border:2px solid #e2e8f5;border-radius:11px;
+      font-size:15px;font-family:'Tajawal',sans-serif;color:var(--dark);
+      outline:none;transition:border-color .22s;background:var(--light);
     }
-    .process-step-title { font-size: 16px; font-weight: 800; color: var(--dark); margin-bottom: 8px; }
-    .process-step-desc { font-size: 13px; color: var(--gray); line-height: 1.7; }
+    .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--orange);background:#fff}
+    .fg textarea{resize:vertical;min-height:110px}
+    .fr{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+    .btn-sub{
+      width:100%;padding:15px;border:none;border-radius:12px;cursor:pointer;
+      background:linear-gradient(135deg,var(--primary),var(--primary-l));
+      color:#fff;font-size:17px;font-weight:800;font-family:'Tajawal',sans-serif;
+      display:flex;align-items:center;justify-content:center;gap:10px;
+      transition:all .25s;
+    }
+    .btn-sub:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,35,126,.3)}
 
-    /* ===== CONTACT ===== */
-    #contact { background: var(--light); }
-    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
-    .contact-info { }
-    .contact-info .section-header { text-align: right; margin-bottom: 28px; }
-    .contact-item {
-      display: flex; align-items: flex-start; gap: 16px;
-      padding: 20px; background: white;
-      border-radius: var(--radius); margin-bottom: 14px;
-      box-shadow: var(--shadow);
-      transition: all .25s;
+    /* ── FOOTER ── */
+    footer{background:var(--dark);color:rgba(255,255,255,.72)}
+    .ft{
+      max-width:1300px;margin:0 auto;padding:60px 24px 40px;
+      display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;
     }
-    .contact-item:hover { transform: translateX(-4px); }
-    .contact-item-icon {
-      width: 50px; height: 50px; flex-shrink: 0;
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      border-radius: 14px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 20px; color: white;
+    .ft-brand p{font-size:14px;line-height:1.9;max-width:280px;margin-top:14px}
+    .ft-soc{display:flex;gap:10px;margin-top:18px}
+    .ft-s{
+      width:40px;height:40px;border-radius:10px;
+      background:rgba(255,255,255,.08);
+      display:flex;align-items:center;justify-content:center;
+      color:rgba(255,255,255,.65);font-size:16px;
+      transition:all .22s;text-decoration:none;
     }
-    .contact-item-text strong { display: block; font-size: 15px; font-weight: 700; color: var(--dark); }
-    .contact-item-text span { font-size: 14px; color: var(--gray); line-height: 1.7; }
-    .contact-item-text a { color: var(--primary); text-decoration: none; font-weight: 600; }
-
-    .contact-form-wrap {
-      background: white; border-radius: var(--radius);
-      padding: 36px; box-shadow: var(--shadow);
-    }
-    .form-title { font-size: 20px; font-weight: 800; color: var(--dark); margin-bottom: 24px; }
-    .form-group { margin-bottom: 18px; }
-    .form-group label { display: block; font-size: 14px; font-weight: 700; color: var(--dark); margin-bottom: 7px; }
-    .form-group input, .form-group select, .form-group textarea {
-      width: 100%; padding: 13px 16px;
-      border: 2px solid #e5e9f0;
-      border-radius: 12px; font-size: 15px;
-      font-family: 'Tajawal', sans-serif;
-      color: var(--dark);
-      outline: none; transition: border-color .25s;
-      background: var(--light);
-    }
-    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-      border-color: var(--accent); background: white;
-    }
-    .form-group textarea { resize: vertical; min-height: 120px; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-    .btn-form {
-      width: 100%; padding: 15px;
-      background: linear-gradient(135deg, var(--primary), var(--primary-light));
-      color: white; border: none; border-radius: 12px;
-      font-size: 17px; font-weight: 700;
-      font-family: 'Tajawal', sans-serif;
-      cursor: pointer; transition: all .25s;
-      display: flex; align-items: center; justify-content: center; gap: 10px;
-    }
-    .btn-form:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(13,71,161,0.3); }
-
-    /* ===== TESTIMONIALS ===== */
-    #testimonials { background: white; }
-    .testimonials-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
-    .testimonial-card {
-      background: var(--light); border-radius: var(--radius);
-      padding: 28px; border-right: 5px solid var(--primary);
-      transition: all .3s;
-    }
-    .testimonial-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-    .testimonial-stars { color: var(--gold); font-size: 16px; margin-bottom: 14px; }
-    .testimonial-text { font-size: 15px; color: var(--gray); line-height: 1.9; margin-bottom: 20px; font-style: italic; }
-    .testimonial-author { display: flex; align-items: center; gap: 12px; }
-    .testimonial-avatar {
-      width: 46px; height: 46px; border-radius: 50%;
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      display: flex; align-items: center; justify-content: center;
-      font-size: 18px; color: white; font-weight: 700; flex-shrink: 0;
-    }
-    .testimonial-name { font-size: 15px; font-weight: 800; color: var(--dark); }
-    .testimonial-loc { font-size: 12px; color: var(--gray); }
-
-    /* ===== FOOTER ===== */
-    footer {
-      background: var(--dark);
-      color: rgba(255,255,255,0.75);
-    }
-    .footer-top {
-      max-width: 1300px; margin: 0 auto; padding: 60px 24px 40px;
-      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px;
-    }
-    .footer-brand .logo { margin-bottom: 16px; }
-    .footer-brand p { font-size: 14px; line-height: 1.9; max-width: 280px; }
-    .footer-socials { display: flex; gap: 10px; margin-top: 20px; }
-    .footer-social {
-      width: 40px; height: 40px;
-      background: rgba(255,255,255,0.08); border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
-      color: rgba(255,255,255,0.7); font-size: 17px;
-      transition: all .25s; text-decoration: none;
-    }
-    .footer-social:hover { background: var(--primary); color: white; }
-    .footer-col h4 { font-size: 16px; font-weight: 800; color: white; margin-bottom: 20px; }
-    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-    .footer-col ul li a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 14px; transition: color .2s; }
-    .footer-col ul li a:hover { color: var(--accent); }
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.08);
-      padding: 20px 24px;
-      text-align: center; font-size: 13px;
-      max-width: 1300px; margin: 0 auto;
+    .ft-s:hover{background:var(--orange);color:#fff}
+    .ft-col h4{font-size:16px;font-weight:900;color:#fff;margin-bottom:18px}
+    .ft-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+    .ft-col ul li a{color:rgba(255,255,255,.62);text-decoration:none;font-size:14px;transition:color .2s}
+    .ft-col ul li a:hover{color:var(--orange-l)}
+    .ft-b{
+      border-top:1px solid rgba(255,255,255,.08);
+      padding:20px 24px;text-align:center;font-size:13px;
+      max-width:1300px;margin:0 auto;
     }
 
-    /* ===== WHATSAPP FLOAT ===== */
-    .wa-float {
-      position: fixed; bottom: 28px; left: 28px;
-      z-index: 9999;
-      display: flex; flex-direction: column; align-items: center; gap: 10px;
+    /* ── FLOATS ── */
+    .wa-fl{position:fixed;bottom:28px;left:28px;z-index:9999;display:flex;flex-direction:column;align-items:center;gap:9px}
+    .wa-bub{
+      background:#fff;border-radius:11px;padding:9px 15px;
+      font-size:13px;font-weight:700;color:#075e54;
+      box-shadow:0 4px 16px rgba(0,0,0,.15);white-space:nowrap;
+      opacity:0;transform:translateX(-10px);
+      animation:wbub 3.5s ease-in-out 2s infinite;
     }
-    .wa-bubble {
-      background: white; border-radius: 12px;
-      padding: 10px 16px; font-size: 13px; font-weight: 600;
-      color: #075e54;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-      white-space: nowrap;
-      opacity: 0; transform: translateX(-10px);
-      animation: waBubble 3s ease-in-out 2s infinite;
+    @keyframes wbub{0%,100%{opacity:0;transform:translateX(-10px)}20%,80%{opacity:1;transform:translateX(0)}}
+    .wa-btn{
+      width:62px;height:62px;border-radius:50%;
+      background:linear-gradient(135deg,#25d366,#128c7e);
+      display:flex;align-items:center;justify-content:center;
+      font-size:28px;color:#fff;text-decoration:none;
+      box-shadow:0 6px 24px rgba(37,211,102,.5);transition:all .25s;
+      animation:wap 2.2s ease-in-out infinite;
     }
-    @keyframes waBubble {
-      0%, 100% { opacity: 0; transform: translateX(-10px); }
-      20%, 80% { opacity: 1; transform: translateX(0); }
+    @keyframes wap{0%,100%{box-shadow:0 6px 24px rgba(37,211,102,.5)}50%{box-shadow:0 6px 36px rgba(37,211,102,.8),0 0 0 12px rgba(37,211,102,.11)}}
+    .wa-btn:hover{transform:scale(1.1)}
+    .cl-fl{position:fixed;bottom:28px;right:28px;z-index:9999}
+    .cl-btn{
+      width:62px;height:62px;border-radius:50%;
+      background:linear-gradient(135deg,var(--primary),var(--orange));
+      display:flex;align-items:center;justify-content:center;
+      font-size:25px;color:#fff;text-decoration:none;
+      box-shadow:0 6px 24px rgba(26,35,126,.45);transition:all .25s;
     }
-    .wa-btn {
-      width: 62px; height: 62px;
-      background: linear-gradient(135deg, #25d366, #128c7e);
-      border-radius: 50%; display: flex; align-items: center; justify-content: center;
-      font-size: 28px; color: white;
-      box-shadow: 0 6px 24px rgba(37,211,102,0.5);
-      text-decoration: none; transition: all .25s;
-      animation: waPulse 2s ease-in-out infinite;
+    .cl-btn:hover{transform:scale(1.1)}
+    .bt{position:fixed;bottom:102px;right:28px;z-index:9999;opacity:0;pointer-events:none;transition:opacity .3s}
+    .bt.vis{opacity:1;pointer-events:auto}
+    .bt a{
+      width:46px;height:46px;border-radius:11px;
+      background:#fff;display:flex;align-items:center;justify-content:center;
+      font-size:19px;color:var(--primary);
+      box-shadow:0 4px 16px rgba(0,0,0,.14);text-decoration:none;transition:all .25s;
     }
-    @keyframes waPulse {
-      0%, 100% { box-shadow: 0 6px 24px rgba(37,211,102,0.5); }
-      50% { box-shadow: 0 6px 36px rgba(37,211,102,0.8), 0 0 0 12px rgba(37,211,102,0.12); }
-    }
-    .wa-btn:hover { transform: scale(1.1); }
+    .bt a:hover{background:var(--primary);color:#fff}
 
-    /* ===== CALL FLOAT ===== */
-    .call-float {
-      position: fixed; bottom: 28px; right: 28px;
-      z-index: 9999;
+    /* ── SERVICE LIST ── */
+    .srv-list{list-style:none;margin:14px 0 0;display:flex;flex-direction:column;gap:7px;border-top:1px solid #f0f0f0;padding-top:14px}
+    .srv-list li{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--gray);line-height:1.5}
+    .srv-list li i{color:var(--orange);font-size:11px;margin-top:3px;flex-shrink:0}
+    .srv-guarantee{
+      display:inline-flex;align-items:center;gap:6px;
+      background:rgba(26,35,126,.07);color:var(--primary);
+      font-size:12px;font-weight:800;padding:5px 12px;border-radius:50px;
+      margin-top:12px;
     }
-    .call-btn {
-      width: 62px; height: 62px;
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      border-radius: 50%; display: flex; align-items: center; justify-content: center;
-      font-size: 26px; color: white;
-      box-shadow: 0 6px 24px rgba(13,71,161,0.45);
-      text-decoration: none; transition: all .25s;
-    }
-    .call-btn:hover { transform: scale(1.1); }
+    .srv-guarantee i{color:var(--orange);font-size:12px}
 
-    /* ===== BACK TO TOP ===== */
-    .back-top {
-      position: fixed; bottom: 100px; right: 28px;
-      z-index: 9999; opacity: 0; pointer-events: none; transition: opacity .3s;
-    }
-    .back-top.visible { opacity: 1; pointer-events: auto; }
-    .back-top a {
-      width: 46px; height: 46px;
-      background: white; border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 20px; color: var(--primary);
-      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-      text-decoration: none; transition: all .25s;
-    }
-    .back-top a:hover { background: var(--primary); color: white; }
+    /* ── FI ── */
+    .fi{opacity:0;transform:translateY(22px);transition:opacity .55s ease,transform .55s ease}
+    .fi.vis{opacity:1;transform:translateY(0)}
 
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 1100px) {
-      .services-grid { grid-template-columns: repeat(2,1fr); }
-      .neighborhoods-grid { grid-template-columns: repeat(4,1fr); }
-      .footer-top { grid-template-columns: 1fr 1fr; }
+    /* ── RESPONSIVE ── */
+    @media(max-width:1100px){
+      .srv-grid{grid-template-columns:repeat(2,1fr)}
+      .ar-grid{grid-template-columns:repeat(4,1fr)}
+      .ft{grid-template-columns:1fr 1fr}
     }
-    @media (max-width: 900px) {
-      .hero-inner { grid-template-columns: 1fr; text-align: center; }
-      .hero-services { justify-content: center; }
-      .hero-actions { justify-content: center; }
-      .hero-image { display: none; }
-      .about-grid { grid-template-columns: 1fr; }
-      .about-images { display: none; }
-      .why-grid { grid-template-columns: repeat(2,1fr); }
-      .process-steps { grid-template-columns: repeat(2,1fr); gap: 30px; }
-      .process-steps::before { display: none; }
-      .contact-grid { grid-template-columns: 1fr; }
-      .testimonials-grid { grid-template-columns: 1fr; }
-      nav { display: none; }
-      .hamburger { display: flex; }
+    @media(max-width:900px){
+      .hero-in{grid-template-columns:1fr;text-align:center}
+      .tags{justify-content:center}
+      .acts{justify-content:center}
+      .hero-img-wrap{display:none}
+      .ab-grid{grid-template-columns:1fr}
+      .ab-imgs{display:none}
+      .why-grid{grid-template-columns:repeat(2,1fr)}
+      .proc{grid-template-columns:repeat(2,1fr);gap:28px}
+      .proc::before{display:none}
+      .ct-grid{grid-template-columns:1fr}
+      .test-grid{grid-template-columns:1fr}
+      .proj-grid{grid-template-columns:repeat(2,1fr)}
+      nav{display:none}
+      .hbg{display:flex}
     }
-    @media (max-width: 640px) {
-      .services-grid { grid-template-columns: 1fr; }
-      .neighborhoods-grid { grid-template-columns: repeat(2,1fr); }
-      .stats-inner { grid-template-columns: repeat(2,1fr); }
-      .why-grid { grid-template-columns: 1fr; }
-      .process-steps { grid-template-columns: 1fr; }
-      .footer-top { grid-template-columns: 1fr; }
-      .form-row { grid-template-columns: 1fr; }
+    @media(max-width:640px){
+      .srv-grid{grid-template-columns:1fr}
+      .ar-grid{grid-template-columns:repeat(2,1fr)}
+      .stats-in{grid-template-columns:repeat(2,1fr)}
+      .why-grid{grid-template-columns:1fr}
+      .proc{grid-template-columns:1fr}
+      .ft{grid-template-columns:1fr}
+      .fr{grid-template-columns:1fr}
+      .proj-grid{grid-template-columns:1fr}
     }
-
-    /* Animations */
-    .fade-in {
-      opacity: 0; transform: translateY(24px);
-      transition: opacity .6s ease, transform .6s ease;
-    }
-    .fade-in.visible { opacity: 1; transform: translateY(0); }
   </style>
 </head>
 <body>
 
-<!-- ===== HEADER ===== -->
+<!-- HEADER -->
 <header>
-  <div class="header-inner">
+  <div class="hd">
     <a href="#" class="logo">
-      <div class="logo-icon"><i class="fas fa-snowflake"></i></div>
-      <div class="logo-text">
-        <div class="name">مؤسسة اللمسة العصرية</div>
-        <div class="sub">خدمات التبريد والتكييف - الدمام</div>
+      <div class="logo-ico"><i class="fas fa-hard-hat"></i></div>
+      <div class="logo-txt">
+        <div class="n">مؤسسة اللمسة العصرية للمقاولات</div>
+        <div class="s">بناء · ترميم · ديكور · الدمام</div>
       </div>
     </a>
     <nav>
       <a href="#services">خدماتنا</a>
+      <a href="#projects">أعمالنا</a>
       <a href="#about">عن المؤسسة</a>
-      <a href="#neighborhoods">أحياء الدمام</a>
-      <a href="#why">لماذا نحن</a>
-      <a href="#contact" class="header-cta"><i class="fas fa-phone-alt"></i> تواصل معنا</a>
+      <a href="#areas">أحياء الدمام</a>
+      <a href="#contact" class="hd-cta"><i class="fas fa-phone-alt"></i> تواصل معنا</a>
     </nav>
-    <button class="hamburger" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+    <button class="hbg" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
   </div>
-  <div class="mobile-nav" id="mobileNav">
+  <div class="mnav" id="mnav">
     <a href="#services" onclick="toggleMenu()">خدماتنا</a>
+    <a href="#projects" onclick="toggleMenu()">أعمالنا</a>
     <a href="#about" onclick="toggleMenu()">عن المؤسسة</a>
-    <a href="#neighborhoods" onclick="toggleMenu()">أحياء الدمام</a>
+    <a href="#areas" onclick="toggleMenu()">أحياء الدمام</a>
     <a href="#why" onclick="toggleMenu()">لماذا نحن</a>
     <a href="#testimonials" onclick="toggleMenu()">آراء العملاء</a>
     <a href="#contact" onclick="toggleMenu()">تواصل معنا</a>
   </div>
 </header>
 
-<!-- ===== HERO ===== -->
+<!-- HERO -->
 <section class="hero" id="home">
-  <div class="hero-blob hero-blob-1"></div>
-  <div class="hero-blob hero-blob-2"></div>
-  <div class="hero-inner">
-    <div class="hero-content">
-      <div class="hero-badge"><i class="fas fa-map-marker-alt"></i> نخدم جميع أحياء الدمام</div>
-      <h1 class="hero-title">
-        مؤسسة <span class="highlight">اللمسة العصرية</span><br/>
-        للتبريد والتكييف
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
+  <div class="hero-in">
+    <div class="hero-cnt">
+      <div class="badge"><i class="fas fa-map-marker-alt"></i> نخدم جميع أحياء الدمام</div>
+      <h1 class="hero-h">
+        مؤسسة <span class="hl">اللمسة العصرية</span><br>
+        للمقاولات العامة
       </h1>
-      <p class="hero-sub">
-        نقدم أفضل خدمات التبريد والتكييف والنظافة ونقل الأثاث والمظلات وكشف التسريبات
-        في <strong style="color:var(--accent2)">الدمام</strong> بأيدي فنيين متخصصين وأسعار تنافسية
+      <p class="hero-p">
+        شريكك الموثوق في البناء والترميم والتشطيب والديكور بالدمام.
+        ننفذ مشاريعك بأعلى معايير الجودة وأيدٍ فنية متخصصة
+        وأسعار تنافسية <strong style="color:var(--gold)">مع ضمان شامل على جميع الأعمال.</strong>
       </p>
-      <div class="hero-services">
-        <span class="hero-service-tag"><i class="fas fa-wind"></i> تكييف وتبريد</span>
-        <span class="hero-service-tag"><i class="fas fa-broom"></i> نظافة شاملة</span>
-        <span class="hero-service-tag"><i class="fas fa-truck-moving"></i> نقل عفش</span>
-        <span class="hero-service-tag"><i class="fas fa-umbrella"></i> مظلات وبرجولات</span>
-        <span class="hero-service-tag"><i class="fas fa-tint-slash"></i> كشف تسريبات</span>
-        <span class="hero-service-tag"><i class="fas fa-bug"></i> مكافحة حشرات</span>
+      <div class="tags">
+        <span class="tag"><i class="fas fa-building"></i> بناء وإنشاء</span>
+        <span class="tag"><i class="fas fa-paint-roller"></i> دهانات وديكور</span>
+        <span class="tag"><i class="fas fa-bolt"></i> كهرباء</span>
+        <span class="tag"><i class="fas fa-faucet"></i> سباكة وصحي</span>
+        <span class="tag"><i class="fas fa-th-large"></i> تبليط وأرضيات</span>
+        <span class="tag"><i class="fas fa-layer-group"></i> جبس وأسقف</span>
+        <span class="tag"><i class="fas fa-umbrella"></i> مظلات وبرجولات</span>
+        <span class="tag"><i class="fas fa-snowflake"></i> تكييف وتبريد</span>
+        <span class="tag"><i class="fas fa-tint-slash"></i> كشف تسريبات</span>
+        <span class="tag"><i class="fas fa-tools"></i> صيانة عامة</span>
       </div>
-      <div class="hero-actions">
-        <a href="https://wa.me/966500000000?text=مرحباً، أريد الاستفسار عن خدماتكم في الدمام" class="btn-primary" target="_blank">
+      <div class="acts">
+        <a href="https://wa.me/966500000000?text=مرحباً، أريد الاستفسار عن خدمات المقاولات في الدمام" class="btn-wa" target="_blank">
           <i class="fab fa-whatsapp"></i> تواصل على واتساب
         </a>
-        <a href="tel:+966500000000" class="btn-secondary">
+        <a href="tel:+966500000000" class="btn-call">
           <i class="fas fa-phone"></i> اتصل الآن
         </a>
       </div>
     </div>
-    <div class="hero-image">
+    <div class="hero-img-wrap">
       <img
-        src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=700&q=80&fit=crop"
-        alt="خدمات التكييف"
-        class="hero-img-main"
+        src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=80&fit=crop"
+        alt="مقاولات بناء الدمام"
+        class="hero-img"
       />
-      <div class="hero-img-badge">
-        <div class="num">+500</div>
-        <div class="txt">عميل راضٍ<br/>في الدمام</div>
+      <div class="hero-badge">
+        <div class="num">+800</div>
+        <div class="txt">مشروع منجز<br>في الدمام</div>
+      </div>
+      <div class="hero-badge2">
+        <div class="n2">15+</div>
+        <div class="t2">سنة خبرة</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== STATS BAR ===== -->
-<div class="stats-bar">
-  <div class="stats-inner">
-    <div class="stat-item fade-in">
-      <div class="stat-num" data-count="15">0</div>
-      <div class="stat-label">سنوات خبرة</div>
+<!-- STATS -->
+<div class="stats">
+  <div class="stats-in">
+    <div class="si fi">
+      <i class="fas fa-calendar-check"></i>
+      <div class="num" data-count="15">0</div>
+      <div class="lbl">سنة خبرة في المقاولات</div>
     </div>
-    <div class="stat-item fade-in">
-      <div class="stat-num" data-count="5000">0</div>
-      <div class="stat-label">مشروع منجز</div>
+    <div class="si fi">
+      <i class="fas fa-hard-hat"></i>
+      <div class="num" data-count="800">0</div>
+      <div class="lbl">مشروع منجز</div>
     </div>
-    <div class="stat-item fade-in">
-      <div class="stat-num" data-count="30">0</div>
-      <div class="stat-label">فني متخصص</div>
+    <div class="si fi">
+      <i class="fas fa-users-cog"></i>
+      <div class="num" data-count="50">0</div>
+      <div class="lbl">فني ومقاول متخصص</div>
     </div>
-    <div class="stat-item fade-in">
-      <div class="stat-num" data-count="24">0</div>
-      <div class="stat-label">ساعة خدمة يومياً</div>
+    <div class="si fi">
+      <i class="fas fa-map-marker-alt"></i>
+      <div class="num" data-count="30">0</div>
+      <div class="lbl">حي نخدمه بالدمام</div>
     </div>
   </div>
 </div>
 
-<!-- ===== SERVICES ===== -->
+<!-- SERVICES -->
 <section id="services">
-  <div class="section-inner">
-    <div class="section-header fade-in">
-      <div class="section-tag"><i class="fas fa-tools"></i> خدماتنا المتميزة</div>
-      <h2 class="section-title">نقدم أشمل الخدمات في الدمام</h2>
-      <p class="section-desc">فريق متخصص من الفنيين المحترفين لتقديم خدمة عالية الجودة على مدار الساعة في جميع أحياء الدمام</p>
+  <div class="sec">
+    <div class="sh fi">
+      <div class="stag"><i class="fas fa-tools"></i> خدماتنا الشاملة</div>
+      <h2 class="s-ttl">كل ما تحتاجه تحت سقف واحد</h2>
+      <p class="s-dsc">مؤسسة اللمسة العصرية للمقاولات تقدم منظومة متكاملة من خدمات البناء والتشطيب والصيانة في الدمام</p>
     </div>
-    <div class="services-grid">
+    <div class="srv-grid">
 
-      <div class="service-card fade-in">
-        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=80&fit=crop" alt="تكييف وتبريد" class="service-img" />
-        <div class="service-body">
-          <div class="service-icon"><i class="fas fa-snowflake"></i></div>
-          <div class="service-name">تكييف وتبريد</div>
-          <div class="service-desc">تركيب وصيانة وإصلاح جميع أنواع أجهزة التكييف والتبريد، تعبئة فريون، تنظيف الفلاتر، وصيانة دورية شاملة بضمان على الشغل.</div>
-          <a href="https://wa.me/966500000000?text=أريد الاستفسار عن خدمة التكييف والتبريد" class="service-link" target="_blank">احجز الآن <i class="fas fa-arrow-left"></i></a>
+      <div class="srv fi">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80&fit=crop" alt="بناء وإنشاء" />
+        <div class="srv-body">
+          <div class="srv-ico"><i class="fas fa-building"></i></div>
+          <div class="srv-name">البناء والإنشاء</div>
+          <div class="srv-desc">تنفيذ مشاريع البناء السكنية والتجارية بالكامل وفق أحدث المعايير الهندسية والكود السعودي للبناء.</div>
+          <ul class="srv-list">
+            <li><i class="fas fa-check-circle"></i> حفر الأساسات والخرسانة المسلحة</li>
+            <li><i class="fas fa-check-circle"></i> البناء بالطوب والبلوك الخفيف</li>
+            <li><i class="fas fa-check-circle"></i> الهيكل الإنشائي والسقف الكامل</li>
+            <li><i class="fas fa-check-circle"></i> بناء فلل وعمائر وملاحق</li>
+            <li><i class="fas fa-check-circle"></i> إشراف هندسي طوال مراحل التنفيذ</li>
+            <li><i class="fas fa-check-circle"></i> تسليم جاهز للتشطيب بالموعد</li>
+          </ul>
+          <div class="srv-guarantee"><i class="fas fa-shield-alt"></i> ضمان على الإنشاء</div>
+          <a href="https://wa.me/966500000000?text=أريد الاستفسار عن خدمة البناء والإنشاء" class="srv-link" target="_blank">اطلب عرض سعر <i class="fas fa-arrow-left"></i></a>
         </div>
       </div>
 
-      <div class="service-card fade-in">
-        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=80&fit=crop" alt="نظافة شاملة" class="service-img" />
-        <div class="service-body">
-          <div class="service-icon"><i class="fas fa-broom"></i></div>
-          <div class="service-name">نظافة شاملة</div>
-          <div class="service-desc">خدمة نظافة المنازل والشقق والفلل والمكاتب باستخدام أحدث المعدات والمواد الآمنة على الصحة والبيئة، وفريق عمالة مدربة ومتخصصة.</div>
-          <a href="https://wa.me/966500000000?text=أريد الاستفسار عن خدمة النظافة" class="service-link" target="_blank">احجز الآن <i class="fas fa-arrow-left"></i></a>
+      <div class="srv fi">
+        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=80&fit=crop" alt="ترميم وتجديد" />
+        <div class="srv-body">
+          <div class="srv-ico"><i class="fas fa-hammer"></i></div>
+          <div class="srv-name">الترميم والتجديد</div>
+          <div class="srv-desc">ترميم وتجديد المنازل والعقارات القديمة بأسعار مناسبة وجودة عالية وتسليم احترافي.</div>
+          <ul class="srv-list">
+            <li><i class="fas fa-check-circle"></i> إصلاح الشقوق والتصدعات في الجدران</li>
+            <li><i class="fas fa-check-circle"></i> تجديد الواجهات الخارجية للمبنى</li>
+            <li><i class="fas fa-check-circle"></i> استبدال الأبواب والنوافذ القديمة</li>
+            <li><i class="fas fa-check-circle"></i> ترميم الأسقف ومعالجة الرطوبة</li>
+            <li><i class="fas fa-check-circle"></i> تجديد الحمامات والمطابخ كاملاً</li>
+            <li><i class="fas fa-check-circle"></i> إعادة تصميم وتوزيع المساحات</li>
+          </ul>
+          <div class="srv-guarantee"><i class="fas fa-shield-alt"></i> ضمان على الترميم</div>
+          <a href="https://wa.me/966500000000?text=أريد الاستفسار عن خدمة الترميم والتجديد" class="srv-link" target="_blank">اطلب عرض سعر <i class="fas fa-arrow-left"></i></a>
         </div>
       </div>
 
-      <div class="service-card fade-in">
-        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&fit=crop" alt="نقل عفش" class="service-img" />
-        <div class="service-body">
-          <div class="service-icon"><i class="fas fa-truck-moving"></i></div>
-          <div class="service-name">نقل عفش</div>
-          <div class="service-desc">نقل الأثاث والعفش داخل الدمام والمناطق المجاورة بأمان تام، مع خدمة الفك والتركيب والتغليف باستخدام مواد التغليف الاحترافية.</div>
-          <a href="https://wa.me/966500000000?text=أريد الاستفسار عن خدمة نقل العفش" class="service-link" target="_blank">احجز الآن <i class="fas fa-arrow-left"></i></a>
+      <div class="srv fi">
+        <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=600&q=80&fit=crop" alt="دهانات وديكور" />
+        <div class="srv-body">
+          <div class="srv-ico"><i class="fas fa-paint-roller"></i></div>
+          <div class="srv-name">الدهانات والديكور</div>
+          <div class="srv-desc">دهانات داخلية وخارجية بأفضل الماركات العالمية مع تشطيبات ديكورية احترافية.</div>
+          <ul class="srv-list">
+            <li><i class="fas fa-check-circle"></i> دهانات ماكو وبلاستيك وزيتي</li>
+            <li><i class="fas fa-check-circle"></i> دهانات خارجية مقاومة للحرارة والرطوبة</li>
+            <li><i class="fas fa-check-circle"></i> ورق جدران ثلاثي الأبعاد وكلاسيكي</li>
+            <li><i class="fas fa-check-circle"></i> حجر هاشمي وأكاليل وطوب ديكور</li>
+            <li><i class="fas fa-check-circle"></i> واجهات زجاجية وألمنيوم كومبوست</li>
+            <li><i class="fas fa-check-circle"></i> ديكور داخلي حديث وكلاسيكي فاخر</li>
+          </ul>
+          <div class="srv-guarantee"><i class="fas fa-shield-alt"></i> ضمان اللون 3 سنوات</div>
+          <a href="https://wa.me/966500000000?text=أريد الاستفسار عن خدمة الدهانات والديكور" class="srv-link" target="_blank">اطلب عرض سعر <i class="fas fa-arrow-left"></i></a>
         </div>
       </div>
 
-      <div class="service-card fade-in">
-        <img src="https://images.unsplash.com/photo-1523413307857-ef7c5bf1bc13?w=600&q=80&fit=crop" alt="مظلات وبرجولات" class="service-img" />
-        <div class="service-body">
-          <div class="service-icon"><i class="fas fa-umbrella"></i></div>
-          <div class="service-name">مظلات وبرجولات</div>
-          <div class="service-desc">تصميم وتركيب مظلات السيارات والمسابح وبرجولات الحدائق ومظلات الحدائق بأجود الخامات وأفضل التصاميم العصرية المناسبة للمناخ.</div>
-          <a href="https://wa.me/966500000000?text=أريد الاستفسار عن خدمة المظلات" class="service-link" target="_blank">احجز الآن <i class="fas fa-arrow-left"></i></a>
+      <div class="srv fi">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&fit=crop" alt="الأعمال الكهربائية" />
+        <div class="srv-body">
+          <div class="srv-ico"><i class="fas fa-bolt"></i></div>
+          <div class="srv-name">الأعمال الكهربائية</div>
+          <div class="srv-desc">تركيب وصيانة الأنظمة الكهربائية الكاملة للمنازل والمنشآت التجارية بأيدي فنيين معتمدين.</div>
+          <ul class="srv-list">
+            <li><i class="fas fa-check-circle"></i> تمديد الأسلاك وتوصيلات المنازل</li>
+            <li><i class="fas fa-check-circle"></i> تركيب لوحات التوزيع الكهربائية</li>
+            <li><i class="fas fa-check-circle"></i> إضاءة LED وسبوت لايت وشرائط</li>
+            <li><i class="fas fa-check-circle"></i> كاميرات مراقبة وأنظمة الإنذار</li>
+            <li><i class="fas fa-check-circle"></i> أنظمة الطاقة الشمسية والإنفرتر</li>
+            <li><i class="fas fa-check-circle"></i> صيانة وإصلاح جميع أعطال الكهرباء</li>
+          </ul>
+          <div class="srv-guarantee"><i class="fas fa-shield-alt"></i> فني معتمد مرخص</div>
+          <a href="https://wa.me/966500000000?text=أريد الاستفسار عن الأعمال الكهربائية" class="srv-link" target="_blank">اطلب عرض سعر <i class="fas fa-arrow-left"></i></a>
         </div>
       </div>
 
-      <div class="service-card fade-in">
-        <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&q=80&fit=crop" alt="كشف تسريبات" class="service-img" />
-        <div class="service-body">
-          <div class="service-icon"><i class="fas fa-tint-slash"></i></div>
-          <div class="service-name">كشف تسريبات المياه</div>
-          <div class="service-desc">كشف تسريبات المياه والعزل المائي للأسطح والخزانات والحمامات بأحدث الأجهزة الإلكترونية دون تكسير، مع ضمان شامل على الأعمال.</div>
-          <a href="https://wa.me/966500000000?text=أريد الاستفسار عن كشف التسريبات" class="service-link" target="_blank">احجز الآن <i class="fas fa-arrow-left"></i></a>
+      <div class="srv fi">
+        <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&q=80&fit=crop" alt="سباكة وصحي" />
+        <div class="srv-body">
+          <div class="srv-ico"><i class="fas fa-faucet"></i></div>
+          <div class="srv-name">السباكة والأعمال الصحية</div>
+          <div class="srv-desc">تركيب وصيانة شبكات المياه والصرف الصحي بأحدث المواد والأجهزة المعتمدة.</div>
+          <ul class="srv-list">
+            <li><i class="fas fa-check-circle"></i> تمديد شبكات المياه الباردة والساخنة</li>
+            <li><i class="fas fa-check-circle"></i> تركيب خزانات المياه علوية وأرضية</li>
+            <li><i class="fas fa-check-circle"></i> تركيب السخانات ودورات المياه</li>
+            <li><i class="fas fa-check-circle"></i> شبكات الصرف الصحي والمجاري</li>
+            <li><i class="fas fa-check-circle"></i> ربط شبكة الغاز المركزي بأمان</li>
+            <li><i class="fas fa-check-circle"></i> صيانة المضخات وإصلاح التسريبات</li>
+          </ul>
+          <div class="srv-guarantee"><i class="fas fa-shield-alt"></i> ضمان سنة كاملة</div>
+          <a href="https://wa.me/966500000000?text=أريد الاستفسار عن أعمال السباكة والصحي" class="srv-link" target="_blank">اطلب عرض سعر <i class="fas fa-arrow-left"></i></a>
         </div>
       </div>
 
-      <div class="service-card fade-in">
-        <img src="https://images.unsplash.com/photo-1563299796-17596ed6b017?w=600&q=80&fit=crop" alt="مكافحة حشرات" class="service-img" />
-        <div class="service-body">
-          <div class="service-icon"><i class="fas fa-bug"></i></div>
-          <div class="service-name">مكافحة الحشرات</div>
-          <div class="service-desc">رش مبيدات آمنة ومرخصة للقضاء على جميع أنواع الحشرات والقوارض في المنازل والمحلات التجارية مع ضمان عدم العودة لمدة سنة كاملة.</div>
-          <a href="https://wa.me/966500000000?text=أريد الاستفسار عن مكافحة الحشرات" class="service-link" target="_blank">احجز الآن <i class="fas fa-arrow-left"></i></a>
+      <div class="srv fi">
+        <img src="https://images.unsplash.com/photo-1615873968403-89e068629265?w=600&q=80&fit=crop" alt="جبس وأسقف" />
+        <div class="srv-body">
+          <div class="srv-ico"><i class="fas fa-layer-group"></i></div>
+          <div class="srv-name">الجبس والأسقف المعلقة</div>
+          <div class="srv-desc">تصميم وتنفيذ أعمال الجبس والأسقف المعلقة بأحدث التصاميم العصرية والكلاسيكية.</div>
+          <ul class="srv-list">
+            <li><i class="fas fa-check-circle"></i> أسقف جبس بورد مستوية ومشكّلة</li>
+            <li><i class="fas fa-check-circle"></i> أسقف معلقة بتصاميم فنية فاخرة</li>
+            <li><i class="fas fa-check-circle"></i> فوم ثلاثي الأبعاد للجدران والأسقف</li>
+            <li><i class="fas fa-check-circle"></i> كورنيش جبسي وقواطع خفيفة</li>
+            <li><i class="fas fa-check-circle"></i> إضاءة مخفية وسبوت لايت مدمج</li>
+            <li><i class="fas fa-check-circle"></i> جبس منحوت وزخرفة عربية كلاسيكية</li>
+          </ul>
+          <div class="srv-guarantee"><i class="fas fa-shield-alt"></i> ضمان على الشغل</div>
+          <a href="https://wa.me/966500000000?text=أريد الاستفسار عن أعمال الجبس والأسقف" class="srv-link" target="_blank">اطلب عرض سعر <i class="fas fa-arrow-left"></i></a>
+        </div>
+      </div>
+
+      <div class="srv fi">
+        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80&fit=crop" alt="تبليط وأرضيات" />
+        <div class="srv-body">
+          <div class="srv-ico"><i class="fas fa-th-large"></i></div>
+          <div class="srv-name">التبليط والأرضيات</div>
+          <div class="srv-desc">تركيب جميع أنواع الأرضيات الداخلية والخارجية بمستوى حرفي عالٍ وتشطيبات دقيقة.</div>
+          <ul class="srv-list">
+            <li><i class="fas fa-check-circle"></i> سيراميك وبورسلان بجميع الأحجام</li>
+            <li><i class="fas fa-check-circle"></i> رخام وجرانيت طبيعي وصناعي</li>
+            <li><i class="fas fa-check-circle"></i> باركيه خشب وبديل خشب SPC</li>
+            <li><i class="fas fa-check-circle"></i> تبليط خارجي مقاوم للحرارة الشديدة</li>
+            <li><i class="fas fa-check-circle"></i> فسيفساء وتصاميم هندسية مخصصة</li>
+            <li><i class="fas fa-check-circle"></i> ترميم وتغيير الأرضيات القديمة</li>
+          </ul>
+          <div class="srv-guarantee"><i class="fas fa-shield-alt"></i> تشطيب فائق الجودة</div>
+          <a href="https://wa.me/966500000000?text=أريد الاستفسار عن التبليط والأرضيات" class="srv-link" target="_blank">اطلب عرض سعر <i class="fas fa-arrow-left"></i></a>
+        </div>
+      </div>
+
+      <div class="srv fi">
+        <img src="https://images.unsplash.com/photo-1696846912973-3233cc80bf86?w=600&q=80&fit=crop" alt="مظلات وبرجولات" />
+        <div class="srv-body">
+          <div class="srv-ico"><i class="fas fa-umbrella"></i></div>
+          <div class="srv-name">المظلات والبرجولات</div>
+          <div class="srv-desc">تصميم وتنفيذ مظلات وبرجولات بأجود الخامات المناسبة لمناخ الدمام الحار.</div>
+          <ul class="srv-list">
+            <li><i class="fas fa-check-circle"></i> مظلات سيارات حديد وألمنيوم</li>
+            <li><i class="fas fa-check-circle"></i> مظلات قماش (تنسيل - شيدي نت)</li>
+            <li><i class="fas fa-check-circle"></i> برجولات خشبية ومعدنية للحدائق</li>
+            <li><i class="fas fa-check-circle"></i> هناجر وكراجات ومستودعات</li>
+            <li><i class="fas fa-check-circle"></i> سواتر وقرميد وخيام رومانية</li>
+            <li><i class="fas fa-check-circle"></i> صيانة وإصلاح المظلات القديمة</li>
+          </ul>
+          <div class="srv-guarantee"><i class="fas fa-shield-alt"></i> ضمان ضد الصدأ والكسر</div>
+          <a href="https://wa.me/966500000000?text=أريد الاستفسار عن المظلات والبرجولات" class="srv-link" target="_blank">اطلب عرض سعر <i class="fas fa-arrow-left"></i></a>
+        </div>
+      </div>
+
+      <div class="srv fi">
+        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=80&fit=crop" alt="تكييف وتبريد" />
+        <div class="srv-body">
+          <div class="srv-ico"><i class="fas fa-snowflake"></i></div>
+          <div class="srv-name">التكييف والتبريد</div>
+          <div class="srv-desc">تركيب وصيانة جميع أنواع أجهزة التكييف بأيدي فنيين مختصين وضمان شامل على الشغل.</div>
+          <ul class="srv-list">
+            <li><i class="fas fa-check-circle"></i> تركيب مكيفات سبليت وكاسيت</li>
+            <li><i class="fas fa-check-circle"></i> تكييف مركزي ودكت كامل</li>
+            <li><i class="fas fa-check-circle"></i> تعبئة فريون وإصلاح جميع الأعطال</li>
+            <li><i class="fas fa-check-circle"></i> تنظيف وتعقيم الفلاتر والكويلات</li>
+            <li><i class="fas fa-check-circle"></i> صيانة دورية وعقود صيانة سنوية</li>
+            <li><i class="fas fa-check-circle"></i> توريد وتركيب جميع الماركات</li>
+          </ul>
+          <div class="srv-guarantee"><i class="fas fa-shield-alt"></i> ضمان سنة على الشغل</div>
+          <a href="https://wa.me/966500000000?text=أريد الاستفسار عن التكييف والتبريد" class="srv-link" target="_blank">اطلب عرض سعر <i class="fas fa-arrow-left"></i></a>
+        </div>
+      </div>
+
+      <div class="srv fi">
+        <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&q=80&fit=crop" alt="أعمال حديد وألمنيوم" />
+        <div class="srv-body">
+          <div class="srv-ico"><i class="fas fa-cogs"></i></div>
+          <div class="srv-name">الأعمال الحديدية والألمنيوم</div>
+          <div class="srv-desc">تصنيع وتركيب جميع الأعمال الحديدية والألمنيوم بدقة احترافية وخامات عالية الجودة.</div>
+          <ul class="srv-list">
+            <li><i class="fas fa-check-circle"></i> أبواب وشبابيك ألمنيوم بجميع الألوان</li>
+            <li><i class="fas fa-check-circle"></i> درابزين حديد مشغول وستانلس ستيل</li>
+            <li><i class="fas fa-check-circle"></i> بوابات أوتوماتيكية وبوابات الكراج</li>
+            <li><i class="fas fa-check-circle"></i> هياكل معدنية وأعمال اللحام</li>
+            <li><i class="fas fa-check-circle"></i> زجاج مزدوج وتمبر وريفليكتيف</li>
+            <li><i class="fas fa-check-circle"></i> غرف مواتير وأعمال الستيل الخاصة</li>
+          </ul>
+          <div class="srv-guarantee"><i class="fas fa-shield-alt"></i> دهان إيبوكسي ضد الصدأ</div>
+          <a href="https://wa.me/966500000000?text=أريد الاستفسار عن الأعمال الحديدية والألمنيوم" class="srv-link" target="_blank">اطلب عرض سعر <i class="fas fa-arrow-left"></i></a>
+        </div>
+      </div>
+
+      <div class="srv fi">
+        <img src="https://images.unsplash.com/photo-1563299796-17596ed6b017?w=600&q=80&fit=crop" alt="عزل وكشف تسريبات" />
+        <div class="srv-body">
+          <div class="srv-ico"><i class="fas fa-tint-slash"></i></div>
+          <div class="srv-name">العزل وكشف التسريبات</div>
+          <div class="srv-desc">عزل شامل وكشف دقيق للتسريبات بأحدث الأجهزة الإلكترونية دون أي تكسير أو إتلاف.</div>
+          <ul class="srv-list">
+            <li><i class="fas fa-check-circle"></i> عزل مائي للأسطح والجدران</li>
+            <li><i class="fas fa-check-circle"></i> عزل الخزانات والأحواض والمسابح</li>
+            <li><i class="fas fa-check-circle"></i> عزل حراري للأسقف والجدران</li>
+            <li><i class="fas fa-check-circle"></i> كشف تسريبات بدون تكسير (أجهزة ألمانية)</li>
+            <li><i class="fas fa-check-circle"></i> حقن الشقوق بمواد إيبوكسي متخصصة</li>
+            <li><i class="fas fa-check-circle"></i> ضمان ضد الرطوبة لسنوات</li>
+          </ul>
+          <div class="srv-guarantee"><i class="fas fa-shield-alt"></i> ضمان 5 سنوات ضد الرطوبة</div>
+          <a href="https://wa.me/966500000000?text=أريد الاستفسار عن العزل وكشف التسريبات" class="srv-link" target="_blank">اطلب عرض سعر <i class="fas fa-arrow-left"></i></a>
+        </div>
+      </div>
+
+      <div class="srv fi">
+        <img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?w=600&q=80&fit=crop" alt="نظافة ومكافحة حشرات" />
+        <div class="srv-body">
+          <div class="srv-ico"><i class="fas fa-broom"></i></div>
+          <div class="srv-name">النظافة ومكافحة الحشرات</div>
+          <div class="srv-desc">تنظيف احترافي شامل للمنازل والمنشآت مع مكافحة الحشرات بمبيدات معتمدة وآمنة.</div>
+          <ul class="srv-list">
+            <li><i class="fas fa-check-circle"></i> تنظيف ما بعد التشطيب الجديد</li>
+            <li><i class="fas fa-check-circle"></i> تنظيف دوري للمنازل والمكاتب</li>
+            <li><i class="fas fa-check-circle"></i> تلميع الأرضيات والزجاج والرخام</li>
+            <li><i class="fas fa-check-circle"></i> رش حشرات بمبيدات معتمدة آمنة</li>
+            <li><i class="fas fa-check-circle"></i> مكافحة الفئران والقوارض نهائياً</li>
+            <li><i class="fas fa-check-circle"></i> فومجيشن وتعقيم شامل للمنشآت</li>
+          </ul>
+          <div class="srv-guarantee"><i class="fas fa-shield-alt"></i> ضمان عدم عودة الحشرات</div>
+          <a href="https://wa.me/966500000000?text=أريد الاستفسار عن النظافة ومكافحة الحشرات" class="srv-link" target="_blank">اطلب عرض سعر <i class="fas fa-arrow-left"></i></a>
         </div>
       </div>
 
@@ -831,54 +855,127 @@
   </div>
 </section>
 
-<!-- ===== ABOUT ===== -->
-<section id="about">
-  <div class="section-inner">
-    <div class="about-grid">
-      <div class="about-images">
-        <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=700&q=80&fit=crop" alt="عن المؤسسة" class="about-img-main" />
-        <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=400&q=80&fit=crop" alt="فريق العمل" class="about-img-small" />
-        <div class="about-exp">
-          <div class="num">15+</div>
-          <div class="txt">سنة خبرة<br/>في الدمام</div>
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="sec">
+    <div class="sh fi">
+      <div class="stag"><i class="fas fa-images"></i> معرض أعمالنا</div>
+      <h2 class="s-ttl">مشاريع نفخر بها في الدمام</h2>
+      <p class="s-dsc">نماذج من مشاريعنا المنجزة في مختلف أحياء الدمام التي تعكس مستوى الجودة والاحترافية التي نلتزم بها</p>
+    </div>
+    <div class="proj-grid">
+      <div class="proj fi">
+        <span class="proj-lbl">بناء وإنشاء</span>
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80&fit=crop" alt="مشروع بناء" />
+        <div class="proj-ov">
+          <div class="proj-ov-txt">
+            <strong>فيلا سكنية - حي الفيصلية</strong>
+            <span>بناء كامل · مساحة 500م²</span>
+          </div>
         </div>
       </div>
-      <div class="about-content">
-        <div class="section-header">
-          <div class="section-tag"><i class="fas fa-building"></i> عن مؤسستنا</div>
-          <h2 class="section-title">مؤسسة اللمسة العصرية</h2>
-          <p class="section-desc">
-            مؤسسة سعودية متخصصة في تقديم خدمات التبريد والتكييف والنظافة ونقل الأثاث والمظلات وكشف التسريبات.
-            نفخر بخدمة أهالي الدمام منذ أكثر من 15 عاماً بكفاءة واحترافية عالية.
+      <div class="proj fi">
+        <span class="proj-lbl">ديكور داخلي</span>
+        <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?w=600&q=80&fit=crop" alt="ديكور" />
+        <div class="proj-ov">
+          <div class="proj-ov-txt">
+            <strong>ديكور شقة - حي الشاطئ</strong>
+            <span>تشطيب كامل · جبس · دهانات</span>
+          </div>
+        </div>
+      </div>
+      <div class="proj fi">
+        <span class="proj-lbl">مظلات</span>
+        <img src="https://images.unsplash.com/photo-1527359443443-84a48aec73d2?w=600&q=80&fit=crop" alt="مظلات" />
+        <div class="proj-ov">
+          <div class="proj-ov-txt">
+            <strong>مظلة كراج - حي العزيزية</strong>
+            <span>مظلة حديد · مساحة 80م²</span>
+          </div>
+        </div>
+      </div>
+      <div class="proj fi">
+        <span class="proj-lbl">تبليط وأرضيات</span>
+        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80&fit=crop" alt="تبليط" />
+        <div class="proj-ov">
+          <div class="proj-ov-txt">
+            <strong>تبليط فيلا - حي الجامعيين</strong>
+            <span>رخام إيطالي · 400م²</span>
+          </div>
+        </div>
+      </div>
+      <div class="proj fi">
+        <span class="proj-lbl">جبس وأسقف</span>
+        <img src="https://images.unsplash.com/photo-1615873968403-89e068629265?w=600&q=80&fit=crop" alt="جبس" />
+        <div class="proj-ov">
+          <div class="proj-ov-txt">
+            <strong>أسقف معلقة - حي الروضة</strong>
+            <span>جبس بورد فني + إضاءة</span>
+          </div>
+        </div>
+      </div>
+      <div class="proj fi">
+        <span class="proj-lbl">ترميم وتجديد</span>
+        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=80&fit=crop" alt="ترميم" />
+        <div class="proj-ov">
+          <div class="proj-ov-txt">
+            <strong>ترميم شامل - حي المنار</strong>
+            <span>ترميم كامل لعمارة 3 أدوار</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="sec">
+    <div class="ab-grid">
+      <div class="ab-imgs">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=80&fit=crop" alt="عن المؤسسة" class="ab-main" />
+        <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=400&q=80&fit=crop" alt="فريق العمل" class="ab-sm" />
+        <div class="ab-yrs">
+          <div class="n">15+</div>
+          <div class="t">سنة خبرة<br>في الدمام</div>
+        </div>
+      </div>
+      <div class="ab-cnt">
+        <div class="sh fi">
+          <div class="stag"><i class="fas fa-hard-hat"></i> عن مؤسستنا</div>
+          <h2 class="s-ttl">مؤسسة اللمسة العصرية للمقاولات</h2>
+          <p class="s-dsc">
+            مؤسسة سعودية مرخصة متخصصة في جميع أعمال المقاولات والبناء والتشطيب والصيانة.
+            نعمل في الدمام منذ أكثر من 15 عاماً ونفتخر بسجل حافل من المشاريع الناجحة التي تُرضي عملاءنا الكرام.
           </p>
         </div>
-        <div class="about-features">
-          <div class="about-feature">
-            <div class="about-feature-icon"><i class="fas fa-certificate"></i></div>
-            <div class="about-feature-text">
-              <strong>مرخصة ومعتمدة</strong>
-              <span>مؤسسة مرخصة رسمياً بكافة الخدمات المنزلية في المنطقة الشرقية</span>
+        <div class="ab-feats">
+          <div class="ab-f fi">
+            <div class="ab-f-ico"><i class="fas fa-certificate"></i></div>
+            <div>
+              <strong>مرخصة ومعتمدة رسمياً</strong>
+              <span>سجل تجاري ساري وعضوية الغرفة التجارية بالدمام وشهادات اعتماد في المقاولات العامة</span>
             </div>
           </div>
-          <div class="about-feature">
-            <div class="about-feature-icon"><i class="fas fa-headset"></i></div>
-            <div class="about-feature-text">
-              <strong>خدمة 24 ساعة / 7 أيام</strong>
-              <span>متاحون على مدار الساعة طوال أيام الأسبوع لخدمتك في حالات الطوارئ</span>
+          <div class="ab-f fi">
+            <div class="ab-f-ico"><i class="fas fa-user-tie"></i></div>
+            <div>
+              <strong>فريق هندسي متكامل</strong>
+              <span>مشرفون ومهندسون ميدانيون وفنيون مهرة في جميع تخصصات الإنشاء والتشطيب</span>
             </div>
           </div>
-          <div class="about-feature">
-            <div class="about-feature-icon"><i class="fas fa-shield-alt"></i></div>
-            <div class="about-feature-text">
-              <strong>ضمان على جميع الأعمال</strong>
-              <span>نقدم ضماناً شاملاً على جميع خدماتنا لضمان رضا عملائنا الكرام</span>
+          <div class="ab-f fi">
+            <div class="ab-f-ico"><i class="fas fa-shield-alt"></i></div>
+            <div>
+              <strong>ضمان شامل على الأعمال</strong>
+              <span>نقدم ضمان معتمداً على جميع أعمالنا الإنشائية والتشطيبية لضمان راحة بالك</span>
             </div>
           </div>
-          <div class="about-feature">
-            <div class="about-feature-icon"><i class="fas fa-dollar-sign"></i></div>
-            <div class="about-feature-text">
-              <strong>أسعار تنافسية وشفافة</strong>
-              <span>نقدم أفضل الأسعار دون رسوم خفية أو تكاليف إضافية مفاجئة</span>
+          <div class="ab-f fi">
+            <div class="ab-f-ico"><i class="fas fa-clock"></i></div>
+            <div>
+              <strong>التسليم في المواعيد المحددة</strong>
+              <span>نلتزم ببنود العقد ونحرص على إتمام المشروع في الوقت المتفق عليه دون أي تأخير</span>
             </div>
           </div>
         </div>
@@ -887,413 +984,266 @@
   </div>
 </section>
 
-<!-- ===== NEIGHBORHOODS ===== -->
-<section id="neighborhoods">
-  <div class="section-inner">
-    <div class="section-header fade-in">
-      <div class="section-tag"><i class="fas fa-map-marked-alt"></i> تغطيتنا الجغرافية</div>
-      <h2 class="section-title">نخدم جميع أحياء الدمام</h2>
-      <p class="section-desc">نصل إليك أينما كنت في الدمام — فريقنا جاهز للتنقل إلى كافة الأحياء بسرعة واحترافية</p>
+<!-- NEIGHBORHOODS -->
+<section id="areas">
+  <div class="sec">
+    <div class="sh fi">
+      <div class="stag"><i class="fas fa-map-marked-alt"></i> تغطيتنا الجغرافية</div>
+      <h2 class="s-ttl">نخدم جميع أحياء الدمام</h2>
+      <p class="s-dsc">فرقنا الميدانية تصل إليك أينما كنت في الدمام — بسرعة ودقة واحترافية</p>
     </div>
-    <div class="neighborhoods-grid">
-
-      <div class="neighborhood-card fade-in">
-        <i class="fas fa-map-pin"></i>
-        <span>حي العزيزية</span>
-        <small>نخدم المنطقة كاملة</small>
-      </div>
-      <div class="neighborhood-card fade-in">
-        <i class="fas fa-map-pin"></i>
-        <span>حي الشاطئ</span>
-        <small>نخدم المنطقة كاملة</small>
-      </div>
-      <div class="neighborhood-card fade-in">
-        <i class="fas fa-map-pin"></i>
-        <span>حي المريكبات</span>
-        <small>نخدم المنطقة كاملة</small>
-      </div>
-      <div class="neighborhood-card fade-in">
-        <i class="fas fa-map-pin"></i>
-        <span>حي الفيصلية</span>
-        <small>نخدم المنطقة كاملة</small>
-      </div>
-      <div class="neighborhood-card fade-in">
-        <i class="fas fa-map-pin"></i>
-        <span>حي النور</span>
-        <small>نخدم المنطقة كاملة</small>
-      </div>
-      <div class="neighborhood-card fade-in">
-        <i class="fas fa-map-pin"></i>
-        <span>حي الروضة</span>
-        <small>نخدم المنطقة كاملة</small>
-      </div>
-      <div class="neighborhood-card fade-in">
-        <i class="fas fa-map-pin"></i>
-        <span>حي الإسكان</span>
-        <small>نخدم المنطقة كاملة</small>
-      </div>
-      <div class="neighborhood-card fade-in">
-        <i class="fas fa-map-pin"></i>
-        <span>حي المنار</span>
-        <small>نخدم المنطقة كاملة</small>
-      </div>
-      <div class="neighborhood-card fade-in">
-        <i class="fas fa-map-pin"></i>
-        <span>حي الجامعيين</span>
-        <small>نخدم المنطقة كاملة</small>
-      </div>
-      <div class="neighborhood-card fade-in">
-        <i class="fas fa-map-pin"></i>
-        <span>حي السلام</span>
-        <small>نخدم المنطقة كاملة</small>
-      </div>
-      <div class="neighborhood-card fade-in">
-        <i class="fas fa-map-pin"></i>
-        <span>حي الربوة</span>
-        <small>نخدم المنطقة كاملة</small>
-      </div>
-      <div class="neighborhood-card fade-in">
-        <i class="fas fa-map-pin"></i>
-        <span>حي الأمانة</span>
-        <small>نخدم المنطقة كاملة</small>
-      </div>
-      <div class="neighborhood-card fade-in">
-        <i class="fas fa-map-pin"></i>
-        <span>حي الخليج</span>
-        <small>نخدم المنطقة كاملة</small>
-      </div>
-      <div class="neighborhood-card fade-in">
-        <i class="fas fa-map-pin"></i>
-        <span>حي البادية</span>
-        <small>نخدم المنطقة كاملة</small>
-      </div>
-      <div class="neighborhood-card fade-in">
-        <i class="fas fa-map-pin"></i>
-        <span>حي العدامة</span>
-        <small>نخدم المنطقة كاملة</small>
-      </div>
-      <div class="neighborhood-card fade-in">
-        <i class="fas fa-map-pin"></i>
-        <span>حي الدواسر</span>
-        <small>نخدم المنطقة كاملة</small>
-      </div>
-      <div class="neighborhood-card fade-in">
-        <i class="fas fa-map-pin"></i>
-        <span>حي المطار</span>
-        <small>نخدم المنطقة كاملة</small>
-      </div>
-      <div class="neighborhood-card fade-in">
-        <i class="fas fa-map-pin"></i>
-        <span>حي الحمراء</span>
-        <small>نخدم المنطقة كاملة</small>
-      </div>
-      <div class="neighborhood-card fade-in">
-        <i class="fas fa-map-pin"></i>
-        <span>حي الأنوار</span>
-        <small>نخدم المنطقة كاملة</small>
-      </div>
-      <div class="neighborhood-card fade-in">
-        <i class="fas fa-map-pin"></i>
-        <span>حي الضباب</span>
-        <small>نخدم المنطقة كاملة</small>
-      </div>
-      <div class="neighborhood-card fade-in">
-        <i class="fas fa-map-pin"></i>
-        <span>حي العتيبية</span>
-        <small>نخدم المنطقة كاملة</small>
-      </div>
-      <div class="neighborhood-card fade-in">
-        <i class="fas fa-map-pin"></i>
-        <span>حي المنتزه</span>
-        <small>نخدم المنطقة كاملة</small>
-      </div>
-      <div class="neighborhood-card fade-in">
-        <i class="fas fa-map-pin"></i>
-        <span>حي اليرموك</span>
-        <small>نخدم المنطقة كاملة</small>
-      </div>
-      <div class="neighborhood-card fade-in">
-        <i class="fas fa-map-pin"></i>
-        <span>حي المزروعية</span>
-        <small>نخدم المنطقة كاملة</small>
-      </div>
-      <div class="neighborhood-card fade-in">
-        <i class="fas fa-map-pin"></i>
-        <span>حي الجلوية</span>
-        <small>نخدم المنطقة كاملة</small>
-      </div>
-      <div class="neighborhood-card fade-in">
-        <i class="fas fa-map-pin"></i>
-        <span>حي النهضة</span>
-        <small>نخدم المنطقة كاملة</small>
-      </div>
-      <div class="neighborhood-card fade-in">
-        <i class="fas fa-map-pin"></i>
-        <span>حي الريان</span>
-        <small>نخدم المنطقة كاملة</small>
-      </div>
-      <div class="neighborhood-card fade-in">
-        <i class="fas fa-map-pin"></i>
-        <span>حي النزهة</span>
-        <small>نخدم المنطقة كاملة</small>
-      </div>
-      <div class="neighborhood-card fade-in">
-        <i class="fas fa-map-pin"></i>
-        <span>حي القادسية</span>
-        <small>نخدم المنطقة كاملة</small>
-      </div>
-      <div class="neighborhood-card fade-in">
-        <i class="fas fa-map-pin"></i>
-        <span>حي أبو معن</span>
-        <small>نخدم المنطقة كاملة</small>
-      </div>
-
+    <div class="ar-grid">
+      <div class="ar fi"><i class="fas fa-map-pin"></i><span>حي العزيزية</span><small>تغطية كاملة</small></div>
+      <div class="ar fi"><i class="fas fa-map-pin"></i><span>حي الشاطئ</span><small>تغطية كاملة</small></div>
+      <div class="ar fi"><i class="fas fa-map-pin"></i><span>حي المريكبات</span><small>تغطية كاملة</small></div>
+      <div class="ar fi"><i class="fas fa-map-pin"></i><span>حي الفيصلية</span><small>تغطية كاملة</small></div>
+      <div class="ar fi"><i class="fas fa-map-pin"></i><span>حي النور</span><small>تغطية كاملة</small></div>
+      <div class="ar fi"><i class="fas fa-map-pin"></i><span>حي الروضة</span><small>تغطية كاملة</small></div>
+      <div class="ar fi"><i class="fas fa-map-pin"></i><span>حي الإسكان</span><small>تغطية كاملة</small></div>
+      <div class="ar fi"><i class="fas fa-map-pin"></i><span>حي المنار</span><small>تغطية كاملة</small></div>
+      <div class="ar fi"><i class="fas fa-map-pin"></i><span>حي الجامعيين</span><small>تغطية كاملة</small></div>
+      <div class="ar fi"><i class="fas fa-map-pin"></i><span>حي السلام</span><small>تغطية كاملة</small></div>
+      <div class="ar fi"><i class="fas fa-map-pin"></i><span>حي الربوة</span><small>تغطية كاملة</small></div>
+      <div class="ar fi"><i class="fas fa-map-pin"></i><span>حي الأمانة</span><small>تغطية كاملة</small></div>
+      <div class="ar fi"><i class="fas fa-map-pin"></i><span>حي الخليج</span><small>تغطية كاملة</small></div>
+      <div class="ar fi"><i class="fas fa-map-pin"></i><span>حي البادية</span><small>تغطية كاملة</small></div>
+      <div class="ar fi"><i class="fas fa-map-pin"></i><span>حي العدامة</span><small>تغطية كاملة</small></div>
+      <div class="ar fi"><i class="fas fa-map-pin"></i><span>حي الدواسر</span><small>تغطية كاملة</small></div>
+      <div class="ar fi"><i class="fas fa-map-pin"></i><span>حي المطار</span><small>تغطية كاملة</small></div>
+      <div class="ar fi"><i class="fas fa-map-pin"></i><span>حي الحمراء</span><small>تغطية كاملة</small></div>
+      <div class="ar fi"><i class="fas fa-map-pin"></i><span>حي الأنوار</span><small>تغطية كاملة</small></div>
+      <div class="ar fi"><i class="fas fa-map-pin"></i><span>حي الضباب</span><small>تغطية كاملة</small></div>
+      <div class="ar fi"><i class="fas fa-map-pin"></i><span>حي العتيبية</span><small>تغطية كاملة</small></div>
+      <div class="ar fi"><i class="fas fa-map-pin"></i><span>حي المنتزه</span><small>تغطية كاملة</small></div>
+      <div class="ar fi"><i class="fas fa-map-pin"></i><span>حي اليرموك</span><small>تغطية كاملة</small></div>
+      <div class="ar fi"><i class="fas fa-map-pin"></i><span>حي المزروعية</span><small>تغطية كاملة</small></div>
+      <div class="ar fi"><i class="fas fa-map-pin"></i><span>حي الجلوية</span><small>تغطية كاملة</small></div>
+      <div class="ar fi"><i class="fas fa-map-pin"></i><span>حي النهضة</span><small>تغطية كاملة</small></div>
+      <div class="ar fi"><i class="fas fa-map-pin"></i><span>حي الريان</span><small>تغطية كاملة</small></div>
+      <div class="ar fi"><i class="fas fa-map-pin"></i><span>حي النزهة</span><small>تغطية كاملة</small></div>
+      <div class="ar fi"><i class="fas fa-map-pin"></i><span>حي القادسية</span><small>تغطية كاملة</small></div>
+      <div class="ar fi"><i class="fas fa-map-pin"></i><span>حي أبو معن</span><small>تغطية كاملة</small></div>
     </div>
   </div>
 </section>
 
-<!-- ===== WHY US ===== -->
+<!-- WHY -->
 <section id="why">
-  <div class="section-inner">
-    <div class="section-header fade-in">
-      <div class="section-tag"><i class="fas fa-star"></i> مميزاتنا</div>
-      <h2 class="section-title">لماذا تختار اللمسة العصرية؟</h2>
-      <p class="section-desc">نحرص على تقديم تجربة متميزة لكل عميل من خلال هذه المزايا الفريدة</p>
+  <div class="sec">
+    <div class="sh fi">
+      <div class="stag"><i class="fas fa-trophy"></i> مميزاتنا</div>
+      <h2 class="s-ttl">لماذا تختار اللمسة العصرية؟</h2>
+      <p class="s-dsc">ما يميزنا عن غيرنا هو التزامنا الراسخ بالجودة والأمانة والمواعيد</p>
     </div>
     <div class="why-grid">
-      <div class="why-card fade-in">
-        <div class="why-icon"><i class="fas fa-clock"></i></div>
-        <div class="why-title">خدمة سريعة الاستجابة</div>
-        <div class="why-desc">نصل إليك خلال ساعة واحدة من استلام طلبك في جميع أحياء الدمام على مدار الساعة</div>
+      <div class="why fi">
+        <div class="why-ico"><i class="fas fa-medal"></i></div>
+        <div class="why-t">جودة لا تُساوَم عليها</div>
+        <div class="why-d">نستخدم أفضل مواد البناء المعتمدة ونطبق أحدث معايير الجودة في كل مرحلة من مراحل التنفيذ</div>
       </div>
-      <div class="why-card fade-in">
-        <div class="why-icon"><i class="fas fa-user-tie"></i></div>
-        <div class="why-title">فنيون محترفون</div>
-        <div class="why-desc">فريق من الفنيين المدربين والمعتمدين ذوي الخبرة الطويلة في مجالاتهم المتخصصة</div>
+      <div class="why fi">
+        <div class="why-ico"><i class="fas fa-file-contract"></i></div>
+        <div class="why-t">عقود شفافة وواضحة</div>
+        <div class="why-d">نوفر عقوداً مكتوبة تفصيلية تحدد الأسعار والمواصفات والجدول الزمني دون أي رسوم مفاجئة</div>
       </div>
-      <div class="why-card fade-in">
-        <div class="why-icon"><i class="fas fa-tag"></i></div>
-        <div class="why-title">أسعار شفافة</div>
-        <div class="why-desc">نقدم عروض أسعار واضحة ومفصلة دون أي رسوم مخفية أو مفاجآت في الفاتورة النهائية</div>
+      <div class="why fi">
+        <div class="why-ico"><i class="fas fa-calendar-check"></i></div>
+        <div class="why-t">التسليم في الموعد</div>
+        <div class="why-d">نلتزم بالجدول الزمني المتفق عليه ونحرص على إتمام مشروعك وتسليمه في الموعد المحدد</div>
       </div>
-      <div class="why-card fade-in">
-        <div class="why-icon"><i class="fas fa-medal"></i></div>
-        <div class="why-title">جودة مضمونة</div>
-        <div class="why-desc">نستخدم أفضل قطع الغيار الأصلية والمواد المعتمدة مع ضمان شامل على جميع أعمالنا</div>
+      <div class="why fi">
+        <div class="why-ico"><i class="fas fa-headset"></i></div>
+        <div class="why-t">دعم ما بعد التسليم</div>
+        <div class="why-d">لا ينتهي دورنا عند التسليم — نتابع معك ونقدم خدمة ما بعد البيع والضمان كاملاً بدون تعقيد</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== PROCESS ===== -->
+<!-- PROCESS -->
 <section id="process">
-  <div class="section-inner">
-    <div class="section-header fade-in">
-      <div class="section-tag"><i class="fas fa-route"></i> طريقة عملنا</div>
-      <h2 class="section-title">كيف نعمل؟</h2>
-      <p class="section-desc">نتبع نهجاً منظماً لضمان أفضل نتائج لعملائنا في كل مرة</p>
+  <div class="sec">
+    <div class="sh fi">
+      <div class="stag"><i class="fas fa-route"></i> منهجية العمل</div>
+      <h2 class="s-ttl">كيف ننفذ مشروعك؟</h2>
+      <p class="s-dsc">نتبع منهجية عمل منظمة ومدروسة لضمان نتائج استثنائية في كل مشروع</p>
     </div>
-    <div class="process-steps">
-      <div class="process-step fade-in">
-        <div class="process-num">1</div>
-        <div class="process-step-title">تواصل معنا</div>
-        <div class="process-step-desc">اتصل بنا أو أرسل رسالة واتساب وسنرد عليك فوراً لتحديد احتياجاتك</div>
+    <div class="proc">
+      <div class="ps fi">
+        <div class="ps-n">1</div>
+        <div class="ps-t">الاستشارة المجانية</div>
+        <div class="ps-d">تواصل معنا وسنقدم لك استشارة مجانية لتحديد احتياجاتك ومتطلبات مشروعك</div>
       </div>
-      <div class="process-step fade-in">
-        <div class="process-num">2</div>
-        <div class="process-step-title">زيارة وتقييم</div>
-        <div class="process-step-desc">يصل فريقنا إلى موقعك لتقييم العمل المطلوب وتقديم عرض سعر شفاف</div>
+      <div class="ps fi">
+        <div class="ps-n">2</div>
+        <div class="ps-t">المعاينة وعرض السعر</div>
+        <div class="ps-d">يزور مهندسنا الموقع ويقدم عرض سعر تفصيلياً شفافاً يشمل جميع البنود</div>
       </div>
-      <div class="process-step fade-in">
-        <div class="process-num">3</div>
-        <div class="process-step-title">تنفيذ العمل</div>
-        <div class="process-step-desc">ننفذ الخدمة بدقة واحترافية عالية وفق أحدث المعايير والمواصفات المعتمدة</div>
+      <div class="ps fi">
+        <div class="ps-n">3</div>
+        <div class="ps-t">التعاقد والتنفيذ</div>
+        <div class="ps-d">نوقع عقداً رسمياً ونبدأ التنفيذ بإشراف هندسي مستمر ومراحل مدروسة</div>
       </div>
-      <div class="process-step fade-in">
-        <div class="process-num">4</div>
-        <div class="process-step-title">ضمان الرضا</div>
-        <div class="process-step-desc">نتابع معك بعد إتمام العمل لضمان رضاك التام وتقديم أي دعم إضافي مجاناً</div>
+      <div class="ps fi">
+        <div class="ps-n">4</div>
+        <div class="ps-t">التسليم والضمان</div>
+        <div class="ps-d">نسلّمك مشروعك بالمواصفات المتفق عليها مع ضمان مكتوب على جميع الأعمال</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== TESTIMONIALS ===== -->
+<!-- TESTIMONIALS -->
 <section id="testimonials">
-  <div class="section-inner">
-    <div class="section-header fade-in">
-      <div class="section-tag"><i class="fas fa-comments"></i> آراء عملائنا</div>
-      <h2 class="section-title">ماذا يقول عملاؤنا؟</h2>
-      <p class="section-desc">رضا عملائنا هو أكبر شهادة على جودة خدماتنا وأمانتنا في العمل</p>
+  <div class="sec">
+    <div class="sh fi">
+      <div class="stag"><i class="fas fa-star"></i> آراء عملائنا</div>
+      <h2 class="s-ttl">ماذا يقول أصحاب المشاريع؟</h2>
+      <p class="s-dsc">رضا عملائنا هو أعظم جائزة ومحفّز لنا على الاستمرار في التميز</p>
     </div>
-    <div class="testimonials-grid">
-
-      <div class="testimonial-card fade-in">
-        <div class="testimonial-stars">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-        </div>
-        <p class="testimonial-text">"خدمة ممتازة جداً! طلبت صيانة للتكييف وجاء الفني في نفس اليوم وحل المشكلة بأسعار معقولة جداً. سأتعامل معهم دائماً."</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">أ</div>
+    <div class="test-grid">
+      <div class="test fi">
+        <div class="test-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="test-txt">"بنيت فيلتي الجديدة مع مؤسسة اللمسة العصرية من الصفر حتى التسليم. العمل نظيف جداً والمواصفات عالية والجدول الزمني التزموا به بالكامل. شكراً جزيلاً."</p>
+        <div class="test-auth">
+          <div class="test-av">م</div>
           <div>
-            <div class="testimonial-name">أحمد السعيد</div>
-            <div class="testimonial-loc"><i class="fas fa-map-marker-alt"></i> حي الفيصلية، الدمام</div>
+            <div class="test-name">المهندس محمد الغامدي</div>
+            <div class="test-loc"><i class="fas fa-map-marker-alt"></i> حي الجامعيين، الدمام</div>
           </div>
         </div>
       </div>
-
-      <div class="testimonial-card fade-in">
-        <div class="testimonial-stars">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-        </div>
-        <p class="testimonial-text">"تعاملت معهم في نقل العفش وكانت تجربة رائعة. الفريق محترف ومنظم ووصلنا الأثاث سليماً 100%. أنصح بهم بشدة لكل أهل الدمام."</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">م</div>
+      <div class="test fi">
+        <div class="test-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="test-txt">"رممت شقتي القديمة معهم وكانت النتيجة خيالية. الدهانات والجبس والتبليط كلها راقية جداً. الفريق محترم وملتزم بالنظافة أثناء العمل. ممتازين."</p>
+        <div class="test-auth">
+          <div class="test-av">ن</div>
           <div>
-            <div class="testimonial-name">منال العتيبي</div>
-            <div class="testimonial-loc"><i class="fas fa-map-marker-alt"></i> حي الشاطئ، الدمام</div>
+            <div class="test-name">نورة العتيبي</div>
+            <div class="test-loc"><i class="fas fa-map-marker-alt"></i> حي الشاطئ، الدمام</div>
           </div>
         </div>
       </div>
-
-      <div class="testimonial-card fade-in">
-        <div class="testimonial-stars">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-        </div>
-        <p class="testimonial-text">"كشفوا تسريباً في المطبخ ما كنت أعرف مكانه لأشهر! جهاز متطور وبدون تكسير. الشغل نظيف والثمن رخيص. شكراً لمؤسسة اللمسة العصرية."</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">ف</div>
+      <div class="test fi">
+        <div class="test-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="test-txt">"ركّبوا لي مظلة الكراج ومظلة الحديقة في يومين فقط وبشكل محترف جداً. السعر كان معقولاً وكانوا صادقين من أول يوم. أنصح كل أهل الدمام بالتعامل معهم."</p>
+        <div class="test-auth">
+          <div class="test-av">ع</div>
           <div>
-            <div class="testimonial-name">فهد القحطاني</div>
-            <div class="testimonial-loc"><i class="fas fa-map-marker-alt"></i> حي العزيزية، الدمام</div>
+            <div class="test-name">عبدالله القحطاني</div>
+            <div class="test-loc"><i class="fas fa-map-marker-alt"></i> حي العزيزية، الدمام</div>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ===== CONTACT ===== -->
+<!-- CONTACT -->
 <section id="contact">
-  <div class="section-inner">
-    <div class="contact-grid">
-      <div class="contact-info">
-        <div class="section-header fade-in">
-          <div class="section-tag"><i class="fas fa-envelope"></i> تواصل معنا</div>
-          <h2 class="section-title">نحن هنا لمساعدتك</h2>
-          <p class="section-desc">تواصل معنا الآن وسنرد عليك في أقرب وقت ممكن</p>
+  <div class="sec">
+    <div class="ct-grid">
+      <div>
+        <div class="sh fi" style="text-align:right;margin-bottom:24px">
+          <div class="stag"><i class="fas fa-headset"></i> تواصل معنا</div>
+          <h2 class="s-ttl">نحن جاهزون لخدمتك</h2>
+          <p class="s-dsc" style="margin:0">تواصل معنا الآن للحصول على استشارة مجانية وعرض سعر لمشروعك</p>
         </div>
-
-        <div class="contact-item fade-in">
-          <div class="contact-item-icon"><i class="fab fa-whatsapp"></i></div>
-          <div class="contact-item-text">
-            <strong>واتساب (متاح 24 ساعة)</strong>
-            <span><a href="https://wa.me/966500000000" target="_blank">اضغط هنا للتواصل الفوري عبر واتساب</a></span>
+        <div class="ct-item fi">
+          <div class="ct-ico"><i class="fab fa-whatsapp"></i></div>
+          <div class="ct-txt">
+            <strong>واتساب — متاح 24 ساعة</strong>
+            <span><a href="https://wa.me/966500000000" target="_blank">اضغط هنا للتواصل الفوري</a></span>
           </div>
         </div>
-
-        <div class="contact-item fade-in">
-          <div class="contact-item-icon"><i class="fas fa-phone-alt"></i></div>
-          <div class="contact-item-text">
-            <strong>رقم الهاتف</strong>
+        <div class="ct-item fi">
+          <div class="ct-ico"><i class="fas fa-phone-alt"></i></div>
+          <div class="ct-txt">
+            <strong>هاتف المؤسسة</strong>
             <span><a href="tel:+966500000000">0500 000 000</a></span>
           </div>
         </div>
-
-        <div class="contact-item fade-in">
-          <div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div>
-          <div class="contact-item-text">
-            <strong>موقعنا</strong>
-            <span>الدمام، المنطقة الشرقية، المملكة العربية السعودية</span>
+        <div class="ct-item fi">
+          <div class="ct-ico"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="ct-txt">
+            <strong>الموقع</strong>
+            <span>الدمام — المنطقة الشرقية — المملكة العربية السعودية</span>
           </div>
         </div>
-
-        <div class="contact-item fade-in">
-          <div class="contact-item-icon"><i class="fas fa-clock"></i></div>
-          <div class="contact-item-text">
+        <div class="ct-item fi">
+          <div class="ct-ico"><i class="fas fa-clock"></i></div>
+          <div class="ct-txt">
             <strong>ساعات العمل</strong>
-            <span>على مدار الساعة — 24/7 — طوال أيام الأسبوع</span>
+            <span>السبت – الخميس: 7 صباحاً – 10 مساءً<br>الجمعة: 4 عصراً – 10 مساءً</span>
           </div>
         </div>
-
-        <div class="contact-item fade-in">
-          <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
-          <div class="contact-item-text">
+        <div class="ct-item fi">
+          <div class="ct-ico"><i class="fas fa-envelope"></i></div>
+          <div class="ct-txt">
             <strong>البريد الإلكتروني</strong>
             <span><a href="mailto:info@modrenlamsa.com">info@modrenlamsa.com</a></span>
           </div>
         </div>
       </div>
-
-      <div class="contact-form-wrap fade-in">
-        <div class="form-title"><i class="fas fa-paper-plane"></i> أرسل لنا رسالة</div>
+      <div class="form-wrap fi">
+        <div class="form-ttl"><i class="fas fa-hard-hat"></i> اطلب عرض سعر مجاناً</div>
         <form onsubmit="submitForm(event)">
-          <div class="form-row">
-            <div class="form-group">
+          <div class="fr">
+            <div class="fg">
               <label>الاسم الكريم *</label>
               <input type="text" placeholder="اسمك الكريم" required />
             </div>
-            <div class="form-group">
+            <div class="fg">
               <label>رقم الجوال *</label>
               <input type="tel" placeholder="05XXXXXXXX" required />
             </div>
           </div>
-          <div class="form-group">
+          <div class="fg">
             <label>الحي / المنطقة</label>
             <select>
               <option value="">اختر حيك في الدمام</option>
-              <option>حي العزيزية</option>
-              <option>حي الشاطئ</option>
-              <option>حي المريكبات</option>
-              <option>حي الفيصلية</option>
-              <option>حي النور</option>
-              <option>حي الروضة</option>
-              <option>حي الإسكان</option>
-              <option>حي المنار</option>
-              <option>حي الجامعيين</option>
-              <option>حي السلام</option>
-              <option>حي الربوة</option>
-              <option>حي الأمانة</option>
-              <option>حي الخليج</option>
-              <option>حي البادية</option>
-              <option>حي العدامة</option>
-              <option>حي الدواسر</option>
-              <option>حي المطار</option>
-              <option>حي الحمراء</option>
-              <option>حي الأنوار</option>
-              <option>حي الضباب</option>
-              <option>حي العتيبية</option>
-              <option>حي المنتزه</option>
-              <option>حي اليرموك</option>
-              <option>حي المزروعية</option>
-              <option>حي الجلوية</option>
-              <option>حي النهضة</option>
-              <option>حي الريان</option>
-              <option>حي النزهة</option>
-              <option>حي القادسية</option>
-              <option>حي أبو معن</option>
+              <option>حي العزيزية</option><option>حي الشاطئ</option>
+              <option>حي المريكبات</option><option>حي الفيصلية</option>
+              <option>حي النور</option><option>حي الروضة</option>
+              <option>حي الإسكان</option><option>حي المنار</option>
+              <option>حي الجامعيين</option><option>حي السلام</option>
+              <option>حي الربوة</option><option>حي الأمانة</option>
+              <option>حي الخليج</option><option>حي البادية</option>
+              <option>حي العدامة</option><option>حي الدواسر</option>
+              <option>حي المطار</option><option>حي الحمراء</option>
+              <option>حي الأنوار</option><option>حي الضباب</option>
+              <option>حي العتيبية</option><option>حي المنتزه</option>
+              <option>حي اليرموك</option><option>حي المزروعية</option>
+              <option>حي الجلوية</option><option>حي النهضة</option>
+              <option>حي الريان</option><option>حي النزهة</option>
+              <option>حي القادسية</option><option>حي أبو معن</option>
             </select>
           </div>
-          <div class="form-group">
-            <label>الخدمة المطلوبة</label>
+          <div class="fg">
+            <label>نوع العمل المطلوب</label>
             <select>
               <option value="">اختر الخدمة</option>
-              <option>تكييف وتبريد</option>
-              <option>نظافة شاملة</option>
-              <option>نقل عفش</option>
+              <option>بناء وإنشاء</option>
+              <option>ترميم وتجديد</option>
+              <option>دهانات وديكور</option>
+              <option>أعمال كهربائية</option>
+              <option>سباكة وصحي</option>
+              <option>جبس وأسقف معلقة</option>
+              <option>تبليط وأرضيات</option>
               <option>مظلات وبرجولات</option>
-              <option>كشف تسريبات</option>
-              <option>مكافحة حشرات</option>
+              <option>تكييف وتبريد</option>
+              <option>أعمال حديد وألمنيوم</option>
+              <option>عزل وكشف تسريبات</option>
+              <option>نظافة ومكافحة حشرات</option>
               <option>خدمات متعددة</option>
             </select>
           </div>
-          <div class="form-group">
-            <label>تفاصيل الطلب</label>
-            <textarea placeholder="اكتب تفاصيل طلبك هنا..."></textarea>
+          <div class="fg">
+            <label>تفاصيل المشروع</label>
+            <textarea placeholder="اكتب تفاصيل مشروعك هنا (المساحة التقريبية، نوع العمل، أي متطلبات خاصة...)"></textarea>
           </div>
-          <button type="submit" class="btn-form">
-            <i class="fas fa-paper-plane"></i> إرسال الطلب
+          <button type="submit" class="btn-sub">
+            <i class="fas fa-paper-plane"></i> أرسل طلبك مجاناً
           </button>
         </form>
       </div>
@@ -1301,156 +1251,109 @@
   </div>
 </section>
 
-<!-- ===== FOOTER ===== -->
+<!-- FOOTER -->
 <footer>
-  <div class="footer-top">
-    <div class="footer-brand">
+  <div class="ft">
+    <div class="ft-brand">
       <a href="#" class="logo">
-        <div class="logo-icon"><i class="fas fa-snowflake"></i></div>
-        <div class="logo-text">
-          <div class="name">مؤسسة اللمسة العصرية</div>
-          <div class="sub">خدمات التبريد والتكييف - الدمام</div>
+        <div class="logo-ico"><i class="fas fa-hard-hat"></i></div>
+        <div class="logo-txt">
+          <div class="n">مؤسسة اللمسة العصرية للمقاولات</div>
+          <div class="s">بناء · ترميم · ديكور · الدمام</div>
         </div>
       </a>
-      <p>مؤسسة سعودية متخصصة في تقديم خدمات التبريد والتكييف والنظافة ونقل الأثاث والمظلات وكشف التسريبات في الدمام منذ أكثر من 15 عاماً.</p>
-      <div class="footer-socials">
-        <a href="#" class="footer-social"><i class="fab fa-whatsapp"></i></a>
-        <a href="#" class="footer-social"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="footer-social"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="footer-social"><i class="fab fa-snapchat"></i></a>
+      <p>مؤسسة سعودية مرخصة متخصصة في جميع أعمال المقاولات والبناء والتشطيب والصيانة في الدمام منذ أكثر من 15 عاماً.</p>
+      <div class="ft-soc">
+        <a href="#" class="ft-s"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="ft-s"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="ft-s"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="ft-s"><i class="fab fa-snapchat"></i></a>
       </div>
     </div>
-
-    <div class="footer-col">
+    <div class="ft-col">
       <h4>خدماتنا</h4>
       <ul>
-        <li><a href="#services">تكييف وتبريد</a></li>
-        <li><a href="#services">نظافة شاملة</a></li>
-        <li><a href="#services">نقل عفش</a></li>
+        <li><a href="#services">بناء وإنشاء</a></li>
+        <li><a href="#services">ترميم وتجديد</a></li>
+        <li><a href="#services">دهانات وديكور</a></li>
+        <li><a href="#services">أعمال كهربائية</a></li>
+        <li><a href="#services">سباكة وصحي</a></li>
+        <li><a href="#services">جبس وأسقف</a></li>
+        <li><a href="#services">تبليط وأرضيات</a></li>
         <li><a href="#services">مظلات وبرجولات</a></li>
-        <li><a href="#services">كشف تسريبات</a></li>
-        <li><a href="#services">مكافحة حشرات</a></li>
       </ul>
     </div>
-
-    <div class="footer-col">
+    <div class="ft-col">
       <h4>أحياء الدمام</h4>
       <ul>
-        <li><a href="#neighborhoods">حي العزيزية</a></li>
-        <li><a href="#neighborhoods">حي الشاطئ</a></li>
-        <li><a href="#neighborhoods">حي الفيصلية</a></li>
-        <li><a href="#neighborhoods">حي النور</a></li>
-        <li><a href="#neighborhoods">حي الروضة</a></li>
-        <li><a href="#neighborhoods">جميع الأحياء</a></li>
+        <li><a href="#areas">حي العزيزية</a></li>
+        <li><a href="#areas">حي الشاطئ</a></li>
+        <li><a href="#areas">حي الفيصلية</a></li>
+        <li><a href="#areas">حي النور</a></li>
+        <li><a href="#areas">حي الروضة</a></li>
+        <li><a href="#areas">حي الجامعيين</a></li>
+        <li><a href="#areas">جميع الأحياء</a></li>
       </ul>
     </div>
-
-    <div class="footer-col">
+    <div class="ft-col">
       <h4>تواصل معنا</h4>
       <ul>
         <li><a href="tel:+966500000000"><i class="fas fa-phone"></i> 0500 000 000</a></li>
         <li><a href="https://wa.me/966500000000" target="_blank"><i class="fab fa-whatsapp"></i> واتساب</a></li>
         <li><a href="mailto:info@modrenlamsa.com"><i class="fas fa-envelope"></i> راسلنا</a></li>
-        <li><a href="#contact"><i class="fas fa-map-marker-alt"></i> الدمام، المنطقة الشرقية</a></li>
+        <li><a href="#areas"><i class="fas fa-map-marker-alt"></i> الدمام، المنطقة الشرقية</a></li>
       </ul>
     </div>
   </div>
-
-  <div class="footer-bottom">
-    <p>© 2025 مؤسسة اللمسة العصرية — جميع الحقوق محفوظة | خدمات التبريد والتكييف في الدمام</p>
+  <div class="ft-b">
+    <p>© 2025 مؤسسة اللمسة العصرية للمقاولات — جميع الحقوق محفوظة | مقاولات الدمام</p>
   </div>
 </footer>
 
-<!-- ===== FLOATING BUTTONS ===== -->
-<div class="wa-float">
-  <div class="wa-bubble">تواصل معنا الآن!</div>
-  <a href="https://wa.me/966500000000?text=مرحباً، أريد الاستفسار عن خدماتكم في الدمام" class="wa-btn" target="_blank">
+<!-- FLOATS -->
+<div class="wa-fl">
+  <div class="wa-bub">تواصل معنا الآن!</div>
+  <a href="https://wa.me/966500000000?text=مرحباً، أريد الاستفسار عن خدمات المقاولات في الدمام" class="wa-btn" target="_blank">
     <i class="fab fa-whatsapp"></i>
   </a>
 </div>
-
-<div class="call-float">
-  <a href="tel:+966500000000" class="call-btn">
-    <i class="fas fa-phone-alt"></i>
-  </a>
+<div class="cl-fl">
+  <a href="tel:+966500000000" class="cl-btn"><i class="fas fa-phone-alt"></i></a>
 </div>
-
-<div class="back-top" id="backTop">
+<div class="bt" id="bt">
   <a href="#home"><i class="fas fa-chevron-up"></i></a>
 </div>
 
-<!-- ===== SCRIPTS ===== -->
 <script>
-  // Mobile menu
-  function toggleMenu() {
-    document.getElementById('mobileNav').classList.toggle('open');
-  }
+  function toggleMenu(){document.getElementById('mnav').classList.toggle('open')}
 
-  // Back to top
-  window.addEventListener('scroll', () => {
-    const bt = document.getElementById('backTop');
-    if (window.scrollY > 400) bt.classList.add('visible');
-    else bt.classList.remove('visible');
+  window.addEventListener('scroll',()=>{
+    document.getElementById('bt').classList.toggle('vis',window.scrollY>400);
+    let cur='';
+    document.querySelectorAll('section[id]').forEach(s=>{if(window.scrollY>=s.offsetTop-100)cur=s.id});
+    document.querySelectorAll('nav a[href^="#"]').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+cur));
   });
 
-  // Intersection Observer for fade-in
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        observer.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target)}}),{threshold:.1});
+  document.querySelectorAll('.fi').forEach(el=>io.observe(el));
 
-  // Counter animation
-  function animateCounter(el) {
-    const target = parseInt(el.dataset.count);
-    const duration = 1800;
-    const step = target / (duration / 16);
-    let current = 0;
-    const timer = setInterval(() => {
-      current += step;
-      if (current >= target) { el.textContent = target + '+'; clearInterval(timer); }
-      else el.textContent = Math.floor(current) + '+';
-    }, 16);
-  }
-  const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        animateCounter(e.target);
-        counterObserver.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.5 });
-  document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
+  const co=new IntersectionObserver(es=>es.forEach(e=>{
+    if(e.isIntersecting){
+      const el=e.target,target=+el.dataset.count,dur=1800,step=target/(dur/16);
+      let cur=0;
+      const t=setInterval(()=>{cur+=step;if(cur>=target){el.textContent=target+'+';clearInterval(t)}else el.textContent=Math.floor(cur)+'+'},16);
+      co.unobserve(el);
+    }
+  }),{threshold:.5});
+  document.querySelectorAll('[data-count]').forEach(el=>co.observe(el));
 
-  // Form submit
-  function submitForm(e) {
+  function submitForm(e){
     e.preventDefault();
-    const btn = e.target.querySelector('.btn-form');
-    btn.innerHTML = '<i class="fas fa-check-circle"></i> تم الإرسال بنجاح!';
-    btn.style.background = 'linear-gradient(135deg,#25d366,#128c7e)';
-    setTimeout(() => {
-      btn.innerHTML = '<i class="fas fa-paper-plane"></i> إرسال الطلب';
-      btn.style.background = '';
-      e.target.reset();
-    }, 3000);
+    const b=e.target.querySelector('.btn-sub');
+    b.innerHTML='<i class="fas fa-check-circle"></i> تم الإرسال — سنتواصل معك قريباً!';
+    b.style.background='linear-gradient(135deg,#25d366,#128c7e)';
+    setTimeout(()=>{b.innerHTML='<i class="fas fa-paper-plane"></i> أرسل طلبك مجاناً';b.style.background='';e.target.reset()},3500);
   }
-
-  // Active nav highlight
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('nav a[href^="#"]');
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(s => {
-      if (window.scrollY >= s.offsetTop - 100) current = s.id;
-    });
-    navLinks.forEach(a => {
-      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
-    });
-  });
 </script>
 </body>
 </html>
