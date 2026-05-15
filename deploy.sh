@@ -3,7 +3,7 @@ set -e
 
 # ─── CONFIG ───────────────────────────────────────────────────────────────────
 DOMAIN="allamsahaleasrih.online"
-APP_DIR="/var/www/$DOMAIN"
+APP_DIR="/var/www/modrenlamsa"
 NGINX_CONF="/etc/nginx/sites-available/$DOMAIN"
 GIT_REPO="https://github.com/EslamEs1/modrenlamsa.git"  # update if needed
 BRANCH="main"
