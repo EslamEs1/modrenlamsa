@@ -379,7 +379,7 @@
 
     /* ── CONTACT ── */
     #contact{background:var(--light)}
-    .ct-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+    .ct-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:900px;margin:0 auto}
     .ct-item{
       display:flex;align-items:flex-start;gap:15px;padding:19px;
       background:#fff;border-radius:var(--r);margin-bottom:13px;
@@ -394,7 +394,6 @@
     .ct-txt strong{display:block;font-size:15px;font-weight:800;color:var(--dark)}
     .ct-txt span{font-size:14px;color:var(--gray);line-height:1.72}
     .ct-txt a{color:var(--orange);text-decoration:none;font-weight:700}
-    .form-wrap{background:#fff;border-radius:var(--r);padding:34px;box-shadow:var(--shadow)}
     .form-ttl{font-size:20px;font-weight:900;color:var(--dark);margin-bottom:22px}
     .fg{margin-bottom:17px}
     .fg label{display:block;font-size:13.5px;font-weight:800;color:var(--dark);margin-bottom:7px}
@@ -443,25 +442,6 @@
     }
 
     /* ── FLOATS ── */
-    .wa-fl{position:fixed;bottom:28px;left:28px;z-index:9999;display:flex;flex-direction:column;align-items:center;gap:9px}
-    .wa-bub{
-      background:#fff;border-radius:11px;padding:9px 15px;
-      font-size:13px;font-weight:700;color:#075e54;
-      box-shadow:0 4px 16px rgba(0,0,0,.15);white-space:nowrap;
-      opacity:0;transform:translateX(-10px);
-      animation:wbub 3.5s ease-in-out 2s infinite;
-    }
-    @keyframes wbub{0%,100%{opacity:0;transform:translateX(-10px)}20%,80%{opacity:1;transform:translateX(0)}}
-    .wa-btn{
-      width:62px;height:62px;border-radius:50%;
-      background:linear-gradient(135deg,#25d366,#128c7e);
-      display:flex;align-items:center;justify-content:center;
-      font-size:28px;color:#fff;text-decoration:none;
-      box-shadow:0 6px 24px rgba(37,211,102,.5);transition:all .25s;
-      animation:wap 2.2s ease-in-out infinite;
-    }
-    @keyframes wap{0%,100%{box-shadow:0 6px 24px rgba(37,211,102,.5)}50%{box-shadow:0 6px 36px rgba(37,211,102,.8),0 0 0 12px rgba(37,211,102,.11)}}
-    .wa-btn:hover{transform:scale(1.1)}
     .cl-fl{position:fixed;bottom:28px;right:28px;z-index:9999}
     .cl-btn{
       width:62px;height:62px;border-radius:50%;
@@ -513,7 +493,7 @@
       .why-grid{grid-template-columns:repeat(2,1fr)}
       .proc{grid-template-columns:repeat(2,1fr);gap:28px}
       .proc::before{display:none}
-      .ct-grid{grid-template-columns:1fr}
+      .ct-grid{grid-template-columns:1fr;max-width:100%}
       .test-grid{grid-template-columns:1fr}
       .proj-grid{grid-template-columns:repeat(2,1fr)}
       nav{display:none}
@@ -607,9 +587,6 @@
         <span class="tag"><i class="fas fa-tools"></i> صيانة عامة</span>
       </div>
       <div class="acts">
-        <a href="https://wa.me/966500000000?text=مرحباً، أريد الاستفسار عن خدمات المقاولات في الدمام" class="btn-wa" target="_blank">
-          <i class="fab fa-whatsapp"></i> تواصل على واتساب
-        </a>
         <a href="tel:+966500000000" class="btn-call">
           <i class="fas fa-phone"></i> اتصل الآن
         </a>
@@ -1235,122 +1212,53 @@
 <!-- CONTACT -->
 <section id="contact">
   <div class="sec">
+    <div class="sh fi">
+      <div class="stag"><i class="fas fa-headset"></i> تواصل معنا</div>
+      <h2 class="s-ttl">نحن جاهزون لخدمتك</h2>
+      <p class="s-dsc">تواصل معنا الآن للحصول على استشارة مجانية وعرض سعر لمشروعك</p>
+    </div>
     <div class="ct-grid">
-      <div>
-        <div class="sh fi" style="text-align:right;margin-bottom:24px">
-          <div class="stag"><i class="fas fa-headset"></i> تواصل معنا</div>
-          <h2 class="s-ttl">نحن جاهزون لخدمتك</h2>
-          <p class="s-dsc" style="margin:0">تواصل معنا الآن للحصول على استشارة مجانية وعرض سعر لمشروعك</p>
-        </div>
-        <div class="ct-item fi">
-          <div class="ct-ico"><i class="fab fa-whatsapp"></i></div>
-          <div class="ct-txt">
-            <strong>واتساب — متاح 24 ساعة</strong>
-            <span><a href="https://wa.me/966500000000" target="_blank">اضغط هنا للتواصل الفوري</a></span>
-          </div>
-        </div>
-        <div class="ct-item fi">
-          <div class="ct-ico"><i class="fas fa-phone-alt"></i></div>
-          <div class="ct-txt">
-            <strong>هاتف المؤسسة</strong>
-            <span><a href="tel:+966500000000">0500 000 000</a></span>
-          </div>
-        </div>
-        <div class="ct-item fi">
-          <div class="ct-ico"><i class="fas fa-map-marker-alt"></i></div>
-          <div class="ct-txt">
-            <strong>الموقع</strong>
-            <span>الدمام — المنطقة الشرقية — المملكة العربية السعودية</span>
-          </div>
-        </div>
-        <div class="ct-item fi">
-          <div class="ct-ico"><i class="fas fa-clock"></i></div>
-          <div class="ct-txt">
-            <strong>ساعات العمل</strong>
-            <span>السبت – الخميس: 7 صباحاً – 10 مساءً<br>الجمعة: 4 عصراً – 10 مساءً</span>
-          </div>
-        </div>
-        <div class="ct-item fi">
-          <div class="ct-ico"><i class="fas fa-envelope"></i></div>
-          <div class="ct-txt">
-            <strong>البريد الإلكتروني</strong>
-            <span><a href="mailto:info@allamsahaleasrih.online">info@allamsahaleasrih.online</a></span>
-          </div>
-        </div>
-        <div class="ct-item fi">
-          <div class="ct-ico"><i class="fas fa-globe"></i></div>
-          <div class="ct-txt">
-            <strong>الموقع الإلكتروني</strong>
-            <span><a href="https://allamsahaleasrih.online" target="_blank">allamsahaleasrih.online</a></span>
-          </div>
+      <div class="ct-item fi">
+        <div class="ct-ico"><i class="fas fa-phone-alt"></i></div>
+        <div class="ct-txt">
+          <strong>هاتف المؤسسة</strong>
+          <span><a href="tel:+966500000000">0500 000 000</a></span>
         </div>
       </div>
-      <div class="form-wrap fi">
-        <div class="form-ttl"><i class="fas fa-hard-hat"></i> اطلب عرض سعر مجاناً</div>
-        <p style="font-size:13px;color:var(--gray);margin-bottom:18px;display:flex;align-items:center;gap:6px;flex-wrap:wrap">
-          <i class="fas fa-envelope" style="color:var(--orange)"></i>
-          أو راسلنا مباشرة:
-          <a href="mailto:info@allamsahaleasrih.online" style="color:var(--primary);font-weight:800;text-decoration:none">info@allamsahaleasrih.online</a>
-        </p>
-        <form onsubmit="submitForm(event)">
-          <div class="fr">
-            <div class="fg">
-              <label>الاسم الكريم *</label>
-              <input type="text" placeholder="اسمك الكريم" required />
-            </div>
-            <div class="fg">
-              <label>رقم الجوال *</label>
-              <input type="tel" placeholder="05XXXXXXXX" required />
-            </div>
-          </div>
-          <div class="fg">
-            <label>الحي / المنطقة</label>
-            <select>
-              <option value="">اختر حيك في الدمام</option>
-              <option>حي العزيزية</option><option>حي الشاطئ</option>
-              <option>حي المريكبات</option><option>حي الفيصلية</option>
-              <option>حي النور</option><option>حي الروضة</option>
-              <option>حي الإسكان</option><option>حي المنار</option>
-              <option>حي الجامعيين</option><option>حي السلام</option>
-              <option>حي الربوة</option><option>حي الأمانة</option>
-              <option>حي الخليج</option><option>حي البادية</option>
-              <option>حي العدامة</option><option>حي الدواسر</option>
-              <option>حي المطار</option><option>حي الحمراء</option>
-              <option>حي الأنوار</option><option>حي الضباب</option>
-              <option>حي العتيبية</option><option>حي المنتزه</option>
-              <option>حي اليرموك</option><option>حي المزروعية</option>
-              <option>حي الجلوية</option><option>حي النهضة</option>
-              <option>حي الريان</option><option>حي النزهة</option>
-              <option>حي القادسية</option><option>حي أبو معن</option>
-            </select>
-          </div>
-          <div class="fg">
-            <label>نوع العمل المطلوب</label>
-            <select>
-              <option value="">اختر الخدمة</option>
-              <option>بناء وإنشاء</option>
-              <option>ترميم وتجديد</option>
-              <option>دهانات وديكور</option>
-              <option>أعمال كهربائية</option>
-              <option>سباكة وصحي</option>
-              <option>جبس وأسقف معلقة</option>
-              <option>تبليط وأرضيات</option>
-              <option>مظلات وبرجولات</option>
-              <option>تكييف وتبريد</option>
-              <option>أعمال حديد وألمنيوم</option>
-              <option>عزل وكشف تسريبات</option>
-              <option>نظافة ومكافحة حشرات</option>
-              <option>خدمات متعددة</option>
-            </select>
-          </div>
-          <div class="fg">
-            <label>تفاصيل المشروع</label>
-            <textarea placeholder="اكتب تفاصيل مشروعك هنا (المساحة التقريبية، نوع العمل، أي متطلبات خاصة...)"></textarea>
-          </div>
-          <button type="submit" class="btn-sub">
-            <i class="fas fa-paper-plane"></i> أرسل طلبك مجاناً
-          </button>
-        </form>
+      <div class="ct-item fi">
+        <div class="ct-ico"><i class="fas fa-envelope"></i></div>
+        <div class="ct-txt">
+          <strong>البريد الإلكتروني</strong>
+          <span><a href="mailto:info@allamsahaleasrih.online">info@allamsahaleasrih.online</a></span>
+        </div>
+      </div>
+      <div class="ct-item fi">
+        <div class="ct-ico"><i class="fas fa-globe"></i></div>
+        <div class="ct-txt">
+          <strong>الموقع الإلكتروني</strong>
+          <span><a href="https://allamsahaleasrih.online" target="_blank">allamsahaleasrih.online</a></span>
+        </div>
+      </div>
+      <div class="ct-item fi">
+        <div class="ct-ico"><i class="fas fa-map-marker-alt"></i></div>
+        <div class="ct-txt">
+          <strong>الموقع</strong>
+          <span>الدمام — المنطقة الشرقية — المملكة العربية السعودية</span>
+        </div>
+      </div>
+      <div class="ct-item fi">
+        <div class="ct-ico"><i class="fas fa-clock"></i></div>
+        <div class="ct-txt">
+          <strong>ساعات العمل</strong>
+          <span>السبت – الخميس: 7 صباحاً – 10 مساءً<br>الجمعة: 4 عصراً – 10 مساءً</span>
+        </div>
+      </div>
+      <div class="ct-item fi">
+        <div class="ct-ico"><i class="fab fa-whatsapp"></i></div>
+        <div class="ct-txt">
+          <strong>واتساب — متاح 24 ساعة</strong>
+          <span><a href="https://wa.me/966500000000" target="_blank">اضغط هنا للتواصل الفوري</a></span>
+        </div>
       </div>
     </div>
   </div>
@@ -1427,12 +1335,6 @@
 </footer>
 
 <!-- FLOATS -->
-<div class="wa-fl">
-  <div class="wa-bub">تواصل معنا الآن!</div>
-  <a href="https://wa.me/966500000000?text=مرحباً، أريد الاستفسار عن خدمات المقاولات في الدمام" class="wa-btn" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-</div>
 <div class="cl-fl">
   <a href="tel:+966500000000" class="cl-btn"><i class="fas fa-phone-alt"></i></a>
 </div>
